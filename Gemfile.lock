@@ -106,6 +106,7 @@ GEM
       unicode-display_width (~> 1.1, >= 1.1.1)
     tilt (2.0.10)
     unicode-display_width (1.6.0)
+    wdm (0.1.1)
 
 PLATFORMS
   x64-mingw32
@@ -115,6 +116,7 @@ DEPENDENCIES
   jekyll-admin
   minimal-mistakes-jekyll!
   rake (~> 10.0)
+  wdm (>= 0.1.0)
 
 BUNDLED WITH
    2.0.2

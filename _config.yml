@@ -76,7 +76,7 @@ social:
 analytics:
   provider: false
   google:
-    tracking_id: null
+    tracking_id: UA-152547676-1
     anonymize_ip: null
 author:
   name: Jaehoon Lee
@@ -203,3 +203,9 @@ defaults:
       comments: null
       share: true
       related: true
+  - scope:
+      path: _pages
+      type: splash
+    values:
+      layout: single
+      author_profile: true
