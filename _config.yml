@@ -8,7 +8,7 @@ description: 'C#, Python, Docker, Kubernetes, Deep learning, Reinforcement learn
 url: 'https://paseul.github.io/'
 baseurl: null
 repository: null
-teaser: null
+teaser: assets/images/unsplash-image-4.jpg
 logo: null
 masthead_title: null
 words_per_minute: 200
@@ -73,11 +73,7 @@ social:
   type: null
   name: null
   links: null
-analytics:
-  provider: false
-  google:
-    tracking_id: UA-152547676-1
-    anonymize_ip: null
+google_analytics: UA-152547676-1
 author:
   name: Jaehoon Lee
   avatar: assets/images/bio-photo-2.jpg
