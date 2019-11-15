@@ -47,13 +47,13 @@ reCaptcha:
   secret: null
 atom_feed:
   path: null
-search: null
-search_full_content: null
-search_provider: null
+search: 'true'
+search_full_content: 'true'
+search_provider: algolia
 algolia:
-  application_id: null
-  index_name: null
-  search_only_api_key: null
+  application_id: 0ESNAQDTWC
+  index_name: devlog
+  search_only_api_key: 851e21fa985fedd9107836d9656afee6
   powered_by: null
 google:
   search_engine_id: null
