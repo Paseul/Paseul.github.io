@@ -8,23 +8,14 @@ description: 'C#, Python, Docker, Kubernetes, Deep learning, Reinforcement learn
 url: 'https://paseul.github.io/'
 baseurl: null
 repository: null
-teaser: assets/images/unsplash-image-4.jpg
+teaser: null
 logo: null
 masthead_title: null
 words_per_minute: 200
 comments:
-  provider: "disqus"
+  provider: disqus
   disqus:
     shortname: paseul
-  discourse:
-    server: null
-  facebook:
-    appid: null
-    num_posts: null
-    colorscheme: null
-  utterances:
-    theme: null
-    issue_term: null
 staticman:
   allowedFields: null
   branch: null
@@ -62,13 +53,7 @@ google_site_verification: null
 bing_site_verification: null
 yandex_site_verification: null
 naver_site_verification: null
-twitter:
-  username: null
-facebook:
-  username: null
-  app_id: null
-  publisher: null
-og_image: null
+og_image: /assets/images/page-header-og-image.png
 social:
   type: null
   name: null
@@ -197,7 +182,7 @@ defaults:
       author_profile: true
       read_time: true
       comments: true
-      share: true
+      share: 'false'
       related: true
   - scope:
       path: _pages
