@@ -1,9 +1,14 @@
 ---
-title:  "Exclude Post from Search Index"
-search: false
-categories: 
-  - Jekyll
-last_modified_at: 2018-02-19T08:06:00-05:00
+title: Exclude Post from Search Index
+layout: single
+author_profile: true
+read_time: true
+comments: true
+share: true
+related: true
+categories:
+- Jekyll
+last_modified_at: '2018-02-19 08:06:00 -0500'
 ---
 
 This post should not appear in the search index because it has the following YAML Front Matter:
