@@ -5,7 +5,7 @@ title_separator: '-'
 subtitle: null
 name: Jaehoon Lee
 description: 'C#, Python, Docker, Kubernetes, Deep learning, Reinforcement learning'
-url: 'https://paseul.github.io/'
+url: 'https://paseul.github.io/network'
 baseurl: null
 repository: null
 teaser: null
@@ -72,28 +72,18 @@ author:
       icon: fas fa-fw fa-envelope-square
     - label: Website
       icon: fas fa-fw fa-link
-    - label: Twitter
-      icon: fab fa-fw fa-twitter-square
     - label: Linkedin
       icon: fab fa-fw fa-linkedin
     - label: GitHub
       icon: fab fa-fw fa-github
-    - label: Instagram
-      icon: fab fa-fw fa-instagram
 footer:
   links:
-    - label: Twitter
-      icon: fab fa-fw fa-twitter-square
-    - label: Facebook
-      icon: fab fa-fw fa-facebook-square
+    - label: Linkedin
+      icon: fab fa-fw fa-linkedin
+      url: "https://www.linkedin.com/in/jaehoon265779188/"
     - label: GitHub
       icon: fab fa-fw fa-github
-    - label: GitLab
-      icon: fab fa-fw fa-gitlab
-    - label: Bitbucket
-      icon: fab fa-fw fa-bitbucket
-    - label: Instagram
-      icon: fab fa-fw fa-instagram
+      url: "https://github.com/paseul"
 include:
   - .htaccess
   - _pages
