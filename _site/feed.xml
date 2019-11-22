@@ -1,23 +1,44 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-11-21T13:56:59+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Paseul’s Devlog</title><subtitle>C#, Python, Docker, Kubernetes, Deep learning, Reinforcement learning</subtitle><author><name>Jaehoon Lee</name><email>machianb@naver.com</email></author><entry><title type="html">네트워크</title><link href="http://localhost:4000/network/" rel="alternate" type="text/html" title="네트워크" /><published>2019-11-19T00:00:00+09:00</published><updated>2019-11-19T00:00:00+09:00</updated><id>http://localhost:4000/network</id><content type="html" xml:base="http://localhost:4000/network/">&lt;h2 id=&quot;lesson-1-정리&quot;&gt;Lesson 1 정리&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-11-22T22:42:29+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Paseul’s Devlog</title><subtitle>C#, Python, Docker, Kubernetes, Deep learning, Reinforcement learning</subtitle><author><name>Jaehoon Lee</name><email>machianb@naver.com</email></author><entry><title type="html">네트워크</title><link href="http://localhost:4000/network_1/" rel="alternate" type="text/html" title="네트워크" /><published>2019-11-19T00:00:00+09:00</published><updated>2019-11-19T00:00:00+09:00</updated><id>http://localhost:4000/network_1</id><content type="html" xml:base="http://localhost:4000/network_1/">&lt;h2 id=&quot;lesson-1-정리&quot;&gt;Lesson 1 정리&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;컴퓨터 간의 연결을 컴퓨터 네트워크라고 부른다
-    &lt;ul&gt;
-      &lt;li&gt;인터넷은 전 세계의 큰 네트워크부터 작은 네트워크까지 연결하는 거대한 네트워크다
-        &lt;ul&gt;
-          &lt;li&gt;패킷은 컴퓨터 간의 데이터를 주고받을 때 네트워크를 통해 흘러가는 작은 데이터 조각이다
-            &lt;blockquote&gt;
-              &lt;p&gt;큰 데이터는 작은 패킷으로 분할한다&lt;/p&gt;
-            &lt;/blockquote&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
+  &lt;li&gt;컴퓨터 간의 연결을 컴퓨터 네트워크라고 부른다&lt;/li&gt;
+  &lt;li&gt;인터넷은 전 세계의 큰 네트워크부터 작은 네트워크까지 연결하는 거대한 네트워크다&lt;/li&gt;
+  &lt;li&gt;패킷은 컴퓨터 간의 데이터를 주고받을 때 네트워크를 통해 흘러가는 작은 데이터 조각이다&lt;/li&gt;
+  &lt;li&gt;큰 데이터는 작은 패킷으로 분할한다&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;lesson-2-정리&quot;&gt;Lesson 2 정리&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;컴퓨터는 0과 1밖에 이해하지 못한다&lt;/li&gt;
+  &lt;li&gt;정보를 나타내는 최소 단위를 비트라고 하며, 비트 여덟 개를 1바이트라고 한다&lt;/li&gt;
+  &lt;li&gt;숫자와 문자의 대응표를 문자코드라고 한다&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;lesson-3-정리&quot;&gt;Lesson 3 정리&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;건물 안이나 특정 지역을 범위로 하는 네트워크를 랜(Local Area Network, LAN)이라고 한다&lt;/li&gt;
+  &lt;li&gt;인터넷 서비스 제공자(ISP)가 제공하는 서비스를 사용하여 구축한 네트워크를 왠(Wide Area Network, WAN)이라고 한다&lt;/li&gt;
+  &lt;li&gt;랜은 왠보다 범위가 좁고 속도가 빠르며 오류가 발생할 확률이 낮다&lt;/li&gt;
+  &lt;li&gt;왠은 랜보다 버무이가 넓고 속도가 느리며 오류가 발생할 확률이 높다&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;lesson-4-정리&quot;&gt;Lesson 4 정리&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;우선 인터넷 서비스 제공자와 인터넷회선을 결정하고 계약한다&lt;/li&gt;
+  &lt;li&gt;인터넷 서비스 제공자와 인터넷 공유기로 접속한다&lt;/li&gt;
+  &lt;li&gt;접속 방식에는 유선 랜 방식과 무선 랜 방식이 있다&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;lesson-5-정리&quot;&gt;Lesson 5 정리&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;DMZ는 외부에 공개하기 위한 네트워크다&lt;/li&gt;
+  &lt;li&gt;외부에 공개하는 서버에는 주로 웹 서버, DNS 서버, 메일 서버가 있다&lt;/li&gt;
+  &lt;li&gt;회사의 서버는 온프레미스나 클라우드로 운영되고 있다&lt;/li&gt;
+  &lt;li&gt;각 서버나 컴퓨터는 스위치나 무선 랜 기능을 사용하여 사내 랜에 접속한다&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;용어-정리&quot;&gt;용어 정리&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;네트워크&lt;/strong&gt;: 컴퓨터를 두 대 이상 연결하여 서로 데이터를 전송할 수 있는 통신망&lt;/p&gt;
 &lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;네트워크&lt;/strong&gt;: 컴퓨터를 두 대 이상 연결하여 서로 데이터를 전송할 수 있는 통신망&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;인터넷&lt;/strong&gt;: TCP/IP 프로토콜을 사용하는 세계 최대 규모의 네트워크다. 전 세계의 컴퓨터를 서로 연결하여 정보를 교환할 수 있도록 만든 하나의 거대한 컴퓨터 통신망이다&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;패킷&lt;/strong&gt;: 네트워크 통신을 할 때 사용되는 작게 분할된 데이터 조각으로 네트워크에서 전송하는 데이터의 기본 단위다&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;비트&lt;/strong&gt;: 정보의 최소 단위로 0 또는 1을 나타낸다&lt;/li&gt;
@@ -25,76 +46,5 @@
   &lt;li&gt;&lt;strong&gt;랜&lt;/strong&gt;: 비교적 가까운 거리에 위치한 장치들을 서로 연결한 네트워크를 말한다. 집, 사무실, 학교 등의 건물과 같이 가까운 지역을 연결하는 네트워크다&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;왠&lt;/strong&gt;: 랜을 다시 하나로 묶은 거대한 네트워크다. 특정 도시, 국가, 대륙과 같이 매우 넓은 범위를 연결하는 네트워크를 말한다. 넓은 지역에 설치된 컴퓨터들 간의 정보와 자원을 공유하기에 적합하도록 설계한 컴퓨터 통신망이다&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;인터넷 서비스 제공자&lt;/strong&gt;: 인터넷에 접속하는 수단을 제공하는 주체다. 일반 사용자, 기업체, 기관, 단체 등이 인터넷에 접속하여 인터넷을 이용할 수 있도록 돕는 사업자다. 현재는 KT, U+, SK브로드밴드와 같은 ISP가 인터넷 서비스를 제공한다&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;서버&lt;/strong&gt;: 컴퓨터 네트워크에서 다른 컴퓨터에 서비스를 제공하기 위한 컴퓨터 또는 프로그램이다. 반대로 서버에 보내 주는 정보 서비스를 받는 측 또는 요&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;계층&lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;OSI 모델&lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;TCP/IP 모델&lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;설명&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;7계층&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;응용 계층(어플리케이션 계층)&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;응용 계층&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;이메일 &amp;amp; 파일 전송, 웹 사이트 조회 등 어플리캐이션에 대한 서비스를 제공&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;6계층&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;표현 계층(프레젠테이션 계층)&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;응용 계층&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;문자 코드, 압축, 암호화 등의 데이터를 변환&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;5계층&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;세션 계층&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;응용 계층&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;세션 체결, 통신 방식을 결정&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;4계층&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;전송 계층&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;전송 계층&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;신뢰할 수 있는 통신을 구현&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;3계층&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;네트워크 계층&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;인터넷 계층&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;다른 네트워크와 통신하기 위한 경로 설정 및 논리 주소를 결정&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;2계층&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;데이터 링크 계층&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;네트워크 접속 계층&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;네트워크 기기 간의 데이터 전송 및 물리 주소를 결정&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;1계층&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;물리 계층&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;네트워크 접속 계층&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;시스템 간의 물리적인 연결과 전기 신호를 변환 및 제어&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sum_n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sum_n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# 시작 시간 저장
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sum_n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;time for sum_n(100):&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# 현재시각 - 시작시간 = 실행 시간
-&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# 시작 시간 저장
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sum_n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;time for sum_n(10000):&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# 현재시각 - 시작시간 = 실행 시간
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Jaehoon Lee</name><email>machianb@naver.com</email></author><summary type="html">Lesson 1 정리 컴퓨터 간의 연결을 컴퓨터 네트워크라고 부른다 인터넷은 전 세계의 큰 네트워크부터 작은 네트워크까지 연결하는 거대한 네트워크다 패킷은 컴퓨터 간의 데이터를 주고받을 때 네트워크를 통해 흘러가는 작은 데이터 조각이다 큰 데이터는 작은 패킷으로 분할한다</summary></entry></feed>
+  &lt;li&gt;&lt;strong&gt;서버&lt;/strong&gt;: 컴퓨터 네트워크에서 다른 컴퓨터에 서비스를 제공하기 위한 컴퓨터 또는 프로그램이다&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Jaehoon Lee</name><email>machianb@naver.com</email></author><summary type="html">Lesson 1 정리 컴퓨터 간의 연결을 컴퓨터 네트워크라고 부른다 인터넷은 전 세계의 큰 네트워크부터 작은 네트워크까지 연결하는 거대한 네트워크다 패킷은 컴퓨터 간의 데이터를 주고받을 때 네트워크를 통해 흘러가는 작은 데이터 조각이다 큰 데이터는 작은 패킷으로 분할한다</summary></entry></feed>
