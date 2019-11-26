@@ -122,8 +122,6 @@ markdown: kramdown
 highlighter: rouge
 lsi: false
 excerpt_separator: |+
-
-
 incremental: false
 kramdown:
   input: GFM
