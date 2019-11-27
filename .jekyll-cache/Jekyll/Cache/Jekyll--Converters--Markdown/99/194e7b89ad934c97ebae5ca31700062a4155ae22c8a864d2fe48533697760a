@@ -1,0 +1,15 @@
+I"�<h1 id="생산적-적대-신경망generative-adversarial-networks-gan">생산적 적대 신경망(generative adversarial networks, GAN)</h1>
+
+<blockquote>
+  <p>두 개 이상의 신경망이 서로를 향하게 하고, 서로 대항하듯이 훈련하게 함으로써, 
+결과적으로 <strong>생성 모델(generative model)</strong> 을 산출해 낸다</p>
+</blockquote>
+
+<p><img src="https://static.packt-cdn.com/products/9781789139907/graphics/1908d2b2-c04a-408d-9baf-f22b1bec49a0.png" alt="GAN architecture" /></p>
+
+<p><a href="/network_1/" class="btn btn--success btn--large">네트워크 1장</a></p>
+
+<blockquote>
+  <p>출처: 실전 예제로 배우는 GAN, “위키북스”</p>
+</blockquote>
+:ET

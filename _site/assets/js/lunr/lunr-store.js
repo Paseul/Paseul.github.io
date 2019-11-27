@@ -8,4 +8,9 @@ var store = [{
         "excerpt":"네트워크와 관련된 내용을 포스팅 해갈 예정입니다   네트워크 1장  ","categories": [],
         "tags": [],
         "url": "http://localhost:4000/network_main/",
+        "teaser":null},{
+        "title": "GAN 메인",
+        "excerpt":"생산적 적대 신경망(generative adversarial networks, GAN)      두 개 이상의 신경망이 서로를 향하게 하고, 서로 대항하듯이 훈련하게 함으로써, 결과적으로  생성 모델(generative model) 을 산출해 낸다       GAN의 구조는 생성기(generator)와 판별기(discriminator)라고 부르는 두 가지 신경망으로 구성되어 있다     생성기: 잠재 공간(latent space)에서 표본(samples)을 추출해 잠재 공간과 출력 간의 관계를 생성하는 역할   *한 모델 안에서 생성기와 판별기를 서로 연결해 적대 모드(adversarial mode)를 취하게 함으로써 생성기를 훈련   판별기: 생성기를 훈련함으로써 훈련된 판별기와 서로 균형을 잡는 방법을 학습   판별기가 너무 뛰어나면 생성기가 발산(알아보기 힘든 데이터를 생성)   GAN 출력     Style transfer: 입력 이미지에 특정 스타일을 적용시키는 방법으로 적은 사례(examples)을 요구하는 것이 특징   DCGAN(deep convolution GAN): 입력 구문(input phrase)을 통해 출력 이미지를 생성   SimGAN: 모조 이미지(simulated image)를 통해 레이블이 붙은 데이터를 자동으로 생성   네트워크 1장      출처: 실전 예제로 배우는 GAN, “위키북스”   ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/gan-main/",
         "teaser":null}]
