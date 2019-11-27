@@ -1,0 +1,75 @@
+I"�<h1 id="우분투-도커-설치이미지-폴더-변경-까지">우분투 도커 설치(이미지 폴더 변경 까지)</h1>
+
+<p>우분투 환경에서 도커를 설치하는 방법을 정리해 보고자 한다. 
+실행 환경: Ubuntu 18.04(LTS)
+도커 버전: 19.03</p>
+
+<p>도커 설치 과정은  <a href="https://docs.docker.com/install/linux/docker-ce/ubuntu/">docs.docker.com</a> 를 참고하여 순서대로 설명해 보겠다.</p>
+
+<ol>
+  <li>Uninstall old versions <br />
+기존에 도커가 설치되어 있다면 도커를 삭제하고 도커 폴더 역시 삭제한다.</li>
+</ol>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 도커 삭제
+$ sudo apt-get remove docker docker-engine docker.io containerd runc
+
+# 도커 폴더 삭제
+$ sudo rm -rf /var/lib/docker
+</code></pre></div></div>
+
+<ol>
+  <li>Set up the repository <br />
+도커 엔진을 설치하기 전에 새로운 기기에 도커 저장소를 설정하여 도커를 설치 및 업데이트 한다</li>
+</ol>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># apt 패키지 업데이트
+$ sudo apt-get update
+
+# HTTPS를 통해 저장소를 사용하기 쉬운 패키지 설치
+$ sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg-agent \
+    software-properties-common
+		
+# 도커의 공식 GPG key 추가하기(생략 가능)
+$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+$ sudo apt-key fingerprint 0EBFCD88
+    
+pub   rsa4096 2017-02-22 [SCEA]
+      9DC8 5822 9FC7 DD38 854A  E2D8 8D81 803C 0EBF CD88
+uid           [ unknown] Docker Release (CE deb) &lt;docker@docker.com&gt;
+sub   rsa4096 2017-02-22 [S]
+
+# 안정적인 저장소 설정하기
+$ sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+</code></pre></div></div>
+
+<ol>
+  <li>Install docker-CE <br />
+이제 도커를 설치해보자</li>
+</ol>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># apt 패키지 업데이트 수행
+$ sudo apt-get update
+
+# 최신 도커 설치
+$ sudo apt-get install docker-ce docker-ce-cli containerd.io
+</code></pre></div></div>
+
+<p>일반적으로 도커를 사용하는데 있어서 위의 절차까지 수행하면 크게 문제가 없다. <strong>하지만</strong> 도커의 이미지의 크기는 매우 크기 때문에 어느순간 하드드라이브가 가득 차서 더이상 설치할 수 없게 된다. 그렇게 되지 않기 위하여 <strong>도커를 사용하면서 사용하지 않는 이미지나 컨테이너를 주기적으로 관리</strong>해 주어야 하지만 대부분의 OS가 설치된 하드는 SSD이고 용량이 상대적으로 적기 때문에 <strong>도커 이미지 위치를 HDD로 변경</strong>하여 사용한다</p>
+
+<ol>
+  <li>Docker default folder change
+도커 폴더 변경은 <a href="https://yookeun.github.io/docker/2018/10/29/docker-change/">이곳</a> 을 참조하였다. 2가지 방법이 나오는데 1번 방법(도커 실행 서비스에서 설정 변경)을 사용하였다</li>
+</ol>
+
+<blockquote>
+  <p>/lib/systemd/system/docker.service</p>
+</blockquote>
+:ET

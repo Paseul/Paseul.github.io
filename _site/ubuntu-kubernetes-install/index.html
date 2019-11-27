@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>네트워크 1장 - Paseul’s Devlog</title>
+<!-- begin _includes/seo.html --><title>우분투 쿠버네티스 설치 - Paseul’s Devlog</title>
 <meta name="description" content="C#, Python, Docker, Kubernetes, Deep learning, Reinforcement learning">
 
 
@@ -19,8 +19,8 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="Paseul's Devlog">
-<meta property="og:title" content="네트워크 1장">
-<meta property="og:url" content="http://localhost:4000/network_1/">
+<meta property="og:title" content="우분투 쿠버네티스 설치">
+<meta property="og:url" content="http://localhost:4000/ubuntu-kubernetes-install/">
 
 
   <meta property="og:description" content="C#, Python, Docker, Kubernetes, Deep learning, Reinforcement learning">
@@ -33,14 +33,14 @@
 
 
 
-  <meta property="article:published_time" content="2019-11-19T00:00:00+09:00">
+  <meta property="article:published_time" content="2019-11-28T00:00:00+09:00">
 
 
 
 
 
 
-<link rel="canonical" href="http://localhost:4000/network_1/">
+<link rel="canonical" href="http://localhost:4000/ubuntu-kubernetes-install/">
 
 
 
@@ -163,222 +163,17 @@
 
 <div id="main" role="main">
   
-  <div class="sidebar sticky">
-  
-  
-    
-      
-      
-      
-      
-    
-      
-      
-      
-      
-    
-    
-      
-
-<nav class="nav__list">
-  <h3 class="nav__title" style="padding-left: 0;">Sample Title</h3>
-  <input id="ac-toc" name="accordion-toc" type="checkbox" />
-  <label for="ac-toc">토글 메뉴</label>
-  <ul class="nav__items">
-    
-      <li>
-        
-          <span class="nav__sub-title">Parent Page A</span>
-        
-
-        
-        <ul>
-          
-            
-            
-
-            
-            
-
-            <li><a href="/" class="">Child Page A1</a></li>
-          
-            
-            
-
-            
-            
-
-            <li><a href="/" class="">Child Page A2</a></li>
-          
-            
-            
-
-            
-            
-
-            <li><a href="/" class="">Child Page A3</a></li>
-          
-            
-            
-
-            
-            
-
-            <li><a href="/" class="">Child Page A4</a></li>
-          
-        </ul>
-        
-      </li>
-    
-      <li>
-        
-          <span class="nav__sub-title">Parent Page B</span>
-        
-
-        
-        <ul>
-          
-            
-            
-
-            
-            
-
-            <li><a href="/" class="">Child Page B1</a></li>
-          
-            
-            
-
-            
-            
-
-            <li><a href="/" class="">Child Page B2</a></li>
-          
-            
-            
-
-            
-            
-
-            <li><a href="/" class="">Child Page B3</a></li>
-          
-            
-            
-
-            
-            
-
-            <li><a href="/" class="">Child Page B4</a></li>
-          
-            
-            
-
-            
-            
-
-            <li><a href="/" class="">Child Page B5</a></li>
-          
-        </ul>
-        
-      </li>
-    
-      <li>
-        
-          <span class="nav__sub-title">Parent Page C</span>
-        
-
-        
-        <ul>
-          
-            
-            
-
-            
-            
-
-            <li><a href="/" class="">Child Page C1</a></li>
-          
-            
-            
-
-            
-            
-
-            <li><a href="/" class="">Child Page C2</a></li>
-          
-            
-            
-
-            
-            
-
-            <li><a href="/" class="">Child Page C3</a></li>
-          
-            
-            
-
-            
-            
-
-            <li><a href="/" class="">Child Page C4</a></li>
-          
-            
-            
-
-            
-            
-
-            <li><a href="/" class="">Child Page C5</a></li>
-          
-        </ul>
-        
-      </li>
-    
-      <li>
-        
-          <span class="nav__sub-title">Parent Page D</span>
-        
-
-        
-        <ul>
-          
-            
-            
-
-            
-            
-
-            <li><a href="/" class="">Child Page D1</a></li>
-          
-            
-            
-
-            
-            
-
-            <li><a href="/" class="">Child Page D2</a></li>
-          
-        </ul>
-        
-      </li>
-    
-  </ul>
-</nav>
-    
-  
-  </div>
-
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="네트워크 1장">
+    <meta itemprop="headline" content="우분투 쿠버네티스 설치">
     <meta itemprop="description" content="">
-    <meta itemprop="datePublished" content="November 19, 2019">
+    <meta itemprop="datePublished" content="November 28, 2019">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">네트워크 1장
+          <h1 id="page-title" class="page__title" itemprop="headline">우분투 쿠버네티스 설치
 </h1>
           
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
@@ -395,73 +190,85 @@
 
       <section class="page__content" itemprop="text">
         
-          <aside class="sidebar__right sticky">
-            <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-heart"></i> Unique Title</h4></header>
-              <ul class="toc__menu">
-  <li><a href="#lesson-1-정리">Lesson 1 정리</a></li>
-  <li><a href="#lesson-2-정리">Lesson 2 정리</a></li>
-  <li><a href="#lesson-3-정리">Lesson 3 정리</a></li>
-  <li><a href="#lesson-4-정리">Lesson 4 정리</a></li>
-  <li><a href="#lesson-5-정리">Lesson 5 정리</a>
-    <ul>
-      <li><a href="#용어-정리">용어 정리</a></li>
-    </ul>
+        <h1 id="우분투-환경에서-쿠버네티스-설치하기dashboard-까지">우분투 환경에서 쿠버네티스 설치하기(dashboard 까지)</h1>
+
+<p>쿠버네티스를 설치하는 방법은 OS나 사용하는 플랫폼에 따라서 달라진다. <br />
+본 포스팅에서는 우분투 환경에서 쿠버네티스를 설치하고 추가적으로 쿠버네티스 대시보드까지 설치해 보도록 하겠다. <br />
+<code class="highlighter-rouge">실행 환경: Ubuntu 18.04(LTS)</code> <br />
+<code class="highlighter-rouge">도커 버전: 19.03</code> <br /></p>
+
+<p>쿠버네티스의 <a href="https://kubernetes.io/ko/docs/setup/">한글 문서</a> 에 보면 공식적으로 지원하는 커뮤니티와 생태계를 확인할 수 있다. <br />
+윈도우의 경우에는 <strong>Docker Desktop</strong> 을 설치하면 되겠구나 하는 생각이 들지만 나머지는 어떤걸 설치해야할지 막막해 진다. <br />
+모든 생태계 마다 설치하는 방법이 링크를 통해 설명되어 있으니 자신이 원하는 생태계를 선택하면 될 것 같다. <br />
+본인은 이중에서 <a href="https://ubuntu.com/kubernetes/install#multi-node">ubuntu.com</a> 에 나온 MicroK8s를 사용하여 설치 해보았다 <br /></p>
+
+<ol>
+  <li>Install the microk8s snap
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo snap install microk8s --classic
+</code></pre></div>    </div>
   </li>
-</ul>
-            </nav>
-          </aside>
-        
-        <h2 id="lesson-1-정리">Lesson 1 정리</h2>
-<ul>
-  <li>컴퓨터 간의 연결을 컴퓨터 네트워크라고 부른다</li>
-  <li>인터넷은 전 세계의 큰 네트워크부터 작은 네트워크까지 연결하는 거대한 네트워크다</li>
-  <li>패킷은 컴퓨터 간의 데이터를 주고받을 때 네트워크를 통해 흘러가는 작은 데이터 조각이다</li>
-  <li>큰 데이터는 작은 패킷으로 분할한다</li>
-</ul>
+  <li>Check the status
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo microk8s.status --wait-ready
+</code></pre></div>    </div>
+  </li>
+  <li>Turn on standard services
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo microk8s.enable dns dashboard registry
+</code></pre></div>    </div>
+  </li>
+</ol>
 
-<h2 id="lesson-2-정리">Lesson 2 정리</h2>
-<ul>
-  <li>컴퓨터는 0과 1밖에 이해하지 못한다</li>
-  <li>정보를 나타내는 최소 단위를 비트라고 하며, 비트 여덟 개를 1바이트라고 한다</li>
-  <li>숫자와 문자의 대응표를 문자코드라고 한다</li>
-</ul>
+<p>MicroK8s를 통해 kubectl 명령을 다음과 같이 수행할 수 있다.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ microk8s.kubectl
+</code></pre></div></div>
+<p>하지만 이렇게 일일히 <strong>microk8s</strong>명령을 수행하는 것은 번거롭기 때문에 <code class="highlighter-rouge">$ sudo -s</code>를 통해 관리자 권한을 가지게 된다면 <strong>microk8s</strong>명령을 생략하고 <strong>kubectl</strong> 명령을 수행할 수 있다.</p>
 
-<h2 id="lesson-3-정리">Lesson 3 정리</h2>
-<ul>
-  <li>건물 안이나 특정 지역을 범위로 하는 네트워크를 랜(Local Area Network, LAN)이라고 한다</li>
-  <li>인터넷 서비스 제공자(ISP)가 제공하는 서비스를 사용하여 구축한 네트워크를 왠(Wide Area Network, WAN)이라고 한다</li>
-  <li>랜은 왠보다 범위가 좁고 속도가 빠르며 오류가 발생할 확률이 낮다</li>
-  <li>왠은 랜보다 버무이가 넓고 속도가 느리며 오류가 발생할 확률이 높다</li>
-</ul>
+<p>이제 kubernetes dashboad를 설치하러 가보자
+대시보드 UI는 기본으로 배포되지 않기 때문에 <a href="https://kubernetes.io/ko/docs/tasks/access-application-cluster/web-ui-dashboard/">쿠버네티스 대시보드 문서</a> 를 참조하여 설치해 보도록 하겠다</p>
 
-<h2 id="lesson-4-정리">Lesson 4 정리</h2>
-<ul>
-  <li>우선 인터넷 서비스 제공자와 인터넷회선을 결정하고 계약한다</li>
-  <li>인터넷 서비스 제공자와 인터넷 공유기로 접속한다</li>
-  <li>접속 방식에는 유선 랜 방식과 무선 랜 방식이 있다</li>
-</ul>
+<ol>
+  <li>Install kubenetes dashboard
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0-beta4/aio/deploy/recommended.yaml
+</code></pre></div>    </div>
+  </li>
+</ol>
 
-<h2 id="lesson-5-정리">Lesson 5 정리</h2>
-<ul>
-  <li>DMZ는 외부에 공개하기 위한 네트워크다</li>
-  <li>외부에 공개하는 서버에는 주로 웹 서버, DNS 서버, 메일 서버가 있다</li>
-  <li>회사의 서버는 온프레미스나 클라우드로 운영되고 있다</li>
-  <li>각 서버나 컴퓨터는 스위치나 무선 랜 기능을 사용하여 사내 랜에 접속한다</li>
-</ul>
+<p>설치가 종료되면 접속을 위한 토큰을 아래 명령을 통해 미리 생성해 둔다</p>
+<ol>
+  <li>Bearer Token
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ kubectl -n kubernetes-dashboard describe secret $(kubectl -n kubernetes-dashboard get secret | grep admin-user | awk '{print $1}')
+</code></pre></div>    </div>
+    <p>이 명령을 입력하면 아래와 같이 토큰이 나온다 <br /></p>
+  </li>
+</ol>
 
-<h3 id="용어-정리">용어 정리</h3>
-<ul>
-  <li><strong>네트워크</strong>: 컴퓨터를 두 대 이상 연결하여 서로 데이터를 전송할 수 있는 통신망</li>
-  <li><strong>인터넷</strong>: TCP/IP 프로토콜을 사용하는 세계 최대 규모의 네트워크다. 전 세계의 컴퓨터를 서로 연결하여 정보를 교환할 수 있도록 만든 하나의 거대한 컴퓨터 통신망이다</li>
-  <li><strong>패킷</strong>: 네트워크 통신을 할 때 사용되는 작게 분할된 데이터 조각으로 네트워크에서 전송하는 데이터의 기본 단위다</li>
-  <li><strong>비트</strong>: 정보의 최소 단위로 0 또는 1을 나타낸다</li>
-  <li><strong>바이트</strong>: 컴퓨터의 정보량 단위로 8비트를 1바이트라고 한다</li>
-  <li><strong>랜</strong>: 비교적 가까운 거리에 위치한 장치들을 서로 연결한 네트워크를 말한다. 집, 사무실, 학교 등의 건물과 같이 가까운 지역을 연결하는 네트워크다</li>
-  <li><strong>왠</strong>: 랜을 다시 하나로 묶은 거대한 네트워크다. 특정 도시, 국가, 대륙과 같이 매우 넓은 범위를 연결하는 네트워크를 말한다. 넓은 지역에 설치된 컴퓨터들 간의 정보와 자원을 공유하기에 적합하도록 설계한 컴퓨터 통신망이다</li>
-  <li><strong>인터넷 서비스 제공자</strong>: 인터넷에 접속하는 수단을 제공하는 주체다. 일반 사용자, 기업체, 기관, 단체 등이 인터넷에 접속하여 인터넷을 이용할 수 있도록 돕는 사업자다. 현재는 KT, U+, SK브로드밴드와 같은 ISP가 인터넷 서비스를 제공한다</li>
-  <li><strong>서버</strong>: 컴퓨터 네트워크에서 다른 컴퓨터에 서비스를 제공하기 위한 컴퓨터 또는 프로그램이다</li>
-</ul>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Name:         admin-user-token-v57nw
+Namespace:    kubernetes-dashboard
+Labels:       &lt;none&gt;
+Annotations:  kubernetes.io/service-account.name: admin-user
+              kubernetes.io/service-account.uid: 0303243c-4040-4a58-8a47-849ee9ba79c1
+
+Type:  kubernetes.io/service-account-token
+
+Data
+====
+ca.crt:     1066 bytes
+namespace:  20 bytes
+token:      eyJhbGciOiJSUzI1NiIsImtpZCI6IiJ9.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJrdWJlcm5ldGVzLWRhc2hib2FyZCIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VjcmV0Lm5hbWUiOiJhZG1pbi11c2VyLXRva2VuLXY1N253Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6ImFkbWluLXVzZXIiLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlcnZpY2UtYWNjb3VudC51aWQiOiIwMzAzMjQzYy00MDQwLTRhNTgtOGE0Ny04NDllZTliYTc5YzEiLCJzdWIiOiJzeXN0ZW06c2VydmljZWFjY291bnQ6a3ViZXJuZXRlcy1kYXNoYm9hcmQ6YWRtaW4tdXNlciJ9.Z2JrQlitASVwWbc-s6deLRFVk5DWD3P_vjUFXsqVSY10pbjFLG4njoZwh8p3tLxnX_VBsr7_6bwxhWSYChp9hwxznemD5x5HLtjb16kI9Z7yFWLtohzkTwuFbqmQaMoget_nYcQBUC5fDmBHRfFvNKePh_vSSb2h_aYXa8GV5AcfPQpY7r461itme1EXHQJqv-SN-zUnguDguCTjD80pFZ_CmnSE1z9QdMHPB8hoB4V68gtswR1VLa6mSYdgPwCHauuOobojALSaMc3RH7MmFUumAgguhqAkX3Omqd3rJbYOMRuMjhANqd08piDC3aIabINX6gP5-Tuuw2svnV6NYQ
+</code></pre></div></div>
+
+<p>토큰이 생성되었다면 프록시 명령을 통해 대시보드를 사용할 수 있다</p>
+<ol>
+  <li>kubectl proxy
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ kubectl proxy
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>그리고 <a href="http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/">http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/</a> 에 접속하여 token을 입력하면</p>
+
+<p><img src="https://d33wubrfki0l68.cloudfront.net/5f56e7ac82f10f46e70403a246c2b93efcf8b5b3/1c09f/images/docs/ui-dashboard-zerostate.png" alt="웰컴 뷰" /></p>
+
+<p>짜잔~! 대시보드를 확인할 수 있다</p>
 
         
       </section>
@@ -472,7 +279,7 @@
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2019-11-19T00:00:00+09:00">November 19, 2019</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2019-11-28T00:00:00+09:00">November 28, 2019</time></p>
         
       </footer>
 
@@ -481,11 +288,11 @@
       
   <nav class="pagination">
     
-      <a href="#" class="pagination--pager disabled">이전</a>
+      <a href="/ubuntu-docker-install/" class="pagination--pager" title="우분투 도커 설치
+">이전</a>
     
     
-      <a href="/network_main/" class="pagination--pager" title="네트워크 메인
-">다음</a>
+      <a href="#" class="pagination--pager disabled">다음</a>
     
   </nav>
 
@@ -499,35 +306,6 @@
     <div class="page__related">
       <h4 class="page__related-title">참고</h4>
       <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/ubuntu-kubernetes-install/" rel="permalink">우분투 쿠버네티스 설치
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  1 분 소요
-
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">
-</p>
-  </article>
-</div>
-
         
           
 
@@ -607,6 +385,35 @@
 
 
   최대 1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/network_1/" rel="permalink">네트워크 1장
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
 
 </p>
     
@@ -731,8 +538,8 @@ search.start();
     
   <script>
     var disqus_config = function () {
-      this.page.url = "http://localhost:4000/network_1/";  // Replace PAGE_URL with your page's canonical URL variable
-      this.page.identifier = "/network_1"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      this.page.url = "http://localhost:4000/ubuntu-kubernetes-install/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/ubuntu-kubernetes-install"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     (function() { // DON'T EDIT BELOW THIS LINE
       var d = document, s = d.createElement('script');
