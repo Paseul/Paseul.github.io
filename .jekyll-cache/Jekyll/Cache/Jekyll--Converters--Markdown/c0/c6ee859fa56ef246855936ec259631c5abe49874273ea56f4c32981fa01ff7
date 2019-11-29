@@ -1,4 +1,4 @@
-I"<h1 id="우분투-도커-설치이미지-폴더-변경-까지">우분투 도커 설치(이미지 폴더 변경 까지)</h1>
+I"^<h1 id="우분투-도커-설치이미지-폴더-변경-까지">우분투 도커 설치(이미지 폴더 변경 까지)</h1>
 
 <p>우분투 환경에서 도커를 설치하는 방법을 정리해 보고자 한다. 
 실행 환경: Ubuntu 18.04(LTS)
@@ -62,10 +62,17 @@ $ sudo apt-get update
 $ sudo apt-get install docker-ce docker-ce-cli containerd.io
 </code></pre></div></div>
 
-<p>일반적으로 도커를 사용하는데 있어서 위의 절차까지 수행하면 크게 문제가 없다. <strong>하지만</strong> 도커의 이미지의 크기는 매우 크기 때문에 어느순간 하드드라이브가 가득 차서 더이상 설치할 수 없게 된다. 그렇게 되지 않기 위하여 <strong>도커를 사용하면서 사용하지 않는 이미지나 컨테이너를 주기적으로 관리</strong>해 주어야 하지만 대부분의 OS가 설치된 하드는 SSD이고 용량이 상대적으로 적기 때문에 <strong>도커 이미지 위치를 HDD로 변경</strong>하여 사용한다</p>
-
 <ol>
-  <li>Docker default folder change
+  <li>Install nvidia-docker2(Option) <br />
+추가적으로 nvidia-docker를 설치한다
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo apt-get install nvidia-docker2
+$ sudo pkill -SIGHUP dockerd
+</code></pre></div>    </div>
+    <p>일반적으로 도커를 사용하는데 있어서 위의 절차까지 수행하면 크게 문제가 없다. <br />
+<strong>하지만</strong> 도커의 이미지의 크기는 매우 크기 때문에 하드드라이브가 가득 차서 더이상 설치할 수 없게 된다. <br />
+그렇게 되지 않기 위하여 <strong>도커를 사용하면서 사용하지 않는 이미지나 컨테이너를 주기적으로 관리</strong>해 주어야 하지만 대부분의 OS가 설치된 하드는 SSD이고 용량이 상대적으로 적기 때문에 <strong>도커 이미지 위치를 HDD로 변경</strong>하여 사용한다</p>
+  </li>
+  <li>Docker default folder change<br />
 도커 폴더 변경은 <a href="https://yookeun.github.io/docker/2018/10/29/docker-change/">이곳</a> 을 참조하였다. <br /> 2가지 방법이 나오는데 1번 방법(도커 실행 서비스에서 설정 변경)을 사용하였다</li>
 </ol>
 
@@ -73,7 +80,7 @@ $ sudo apt-get install docker-ce docker-ce-cli containerd.io
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#ExecStart=/usr/bin/dockerd -H fd://
 ExecStart=/usr/bin/dockerd -g /media/username/data/docker -H fd://
 </code></pre></div></div>
-<p>**/media/username/data/docker 이 경로를 자신의 폴더 경로로 변경한다</p>
+<p><code class="highlighter-rouge">/media/username/data/docker</code> 이 경로를 자신의 폴더 경로로 변경한다</p>
 
 <p>도커를 중지하고 기본 도커 폴더의 내용을 이동</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 기본 폴더안의 내용을 옮기기 위해 docker를 중지
