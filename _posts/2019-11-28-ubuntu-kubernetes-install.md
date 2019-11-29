@@ -37,20 +37,18 @@ MicroK8s를 통해 kubectl 명령을 다음과 같이 수행할 수 있다.
 ```
 $ microk8s.kubectl
 ```
-하지만 이렇게 일일히 **microk8s**명령을 수행하는 것은 번거롭기 때문에 ``` $ sudo -s```를 통해 관리자 권한을 가지게 된다면 **microk8s**명령을 생략하고 **kubectl** 명령을 수행할 수 있다.
-
 이제 kubernetes dashboad를 설치하러 가보자
 대시보드 UI는 기본으로 배포되지 않기 때문에 [쿠버네티스 대시보드 문서](https://kubernetes.io/ko/docs/tasks/access-application-cluster/web-ui-dashboard/) 를 참조하여 설치해 보도록 하겠다
 
 4. Install kubenetes dashboard
 ```
-$ kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0-beta4/aio/deploy/recommended.yaml
+$ microk8s.kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0-beta4/aio/deploy/recommended.yaml
 ```
 
 설치가 종료되면 접속을 위한 토큰을 아래 명령을 통해 미리 생성해 둔다
 5. Bearer Token
 ```
-$ kubectl -n kubernetes-dashboard describe secret $(kubectl -n kubernetes-dashboard get secret | grep admin-user | awk '{print $1}')
+$ microk8s.kubectl -n kubernetes-dashboard describe secret $(kubectl -n kubernetes-dashboard get secret | grep admin-user | awk '{print $1}')
 ```
 이 명령을 입력하면 아래와 같이 토큰이 나온다 <br>
 
@@ -73,7 +71,7 @@ token:      eyJhbGciOiJSUzI1NiIsImtpZCI6IiJ9.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2V
 토큰이 생성되었다면 프록시 명령을 통해 대시보드를 사용할 수 있다
 6. kubectl proxy
 ```
-$ kubectl proxy
+$ microk8s.kubectl proxy
 ```
 
 그리고 [http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/]( http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/) 에 접속하여 token을 입력하면

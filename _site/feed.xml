@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-11-29T10:01:40+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Paseul’s Devlog</title><subtitle>C#, Python, Docker, Kubernetes, Deep learning, Reinforcement learning</subtitle><author><name>Jaehoon Lee</name><email>machianb@naver.com</email></author><entry><title type="html">우분투 쿠버네티스 설치</title><link href="http://localhost:4000/ubuntu-kubernetes-install/" rel="alternate" type="text/html" title="우분투 쿠버네티스 설치" /><published>2019-11-28T00:00:00+09:00</published><updated>2019-11-28T00:00:00+09:00</updated><id>http://localhost:4000/ubuntu-kubernetes-install</id><content type="html" xml:base="http://localhost:4000/ubuntu-kubernetes-install/">&lt;h1 id=&quot;우분투-환경에서-쿠버네티스-설치하기dashboard-까지&quot;&gt;우분투 환경에서 쿠버네티스 설치하기(dashboard 까지)&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-11-29T10:11:40+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Paseul’s Devlog</title><subtitle>C#, Python, Docker, Kubernetes, Deep learning, Reinforcement learning</subtitle><author><name>Jaehoon Lee</name><email>machianb@naver.com</email></author><entry><title type="html">우분투 쿠버네티스 설치</title><link href="http://localhost:4000/ubuntu-kubernetes-install/" rel="alternate" type="text/html" title="우분투 쿠버네티스 설치" /><published>2019-11-28T00:00:00+09:00</published><updated>2019-11-28T00:00:00+09:00</updated><id>http://localhost:4000/ubuntu-kubernetes-install</id><content type="html" xml:base="http://localhost:4000/ubuntu-kubernetes-install/">&lt;h1 id=&quot;우분투-환경에서-쿠버네티스-설치하기dashboard-까지&quot;&gt;우분투 환경에서 쿠버네티스 설치하기(dashboard 까지)&lt;/h1&gt;
 
 &lt;p&gt;쿠버네티스를 설치하는 방법은 OS나 사용하는 플랫폼에 따라서 달라진다. &lt;br /&gt;
 본 포스팅에서는 우분투 환경에서 쿠버네티스를 설치하고 추가적으로 쿠버네티스 대시보드까지 설치해 보도록 하겠다. &lt;br /&gt;
@@ -28,14 +28,12 @@
 &lt;p&gt;MicroK8s를 통해 kubectl 명령을 다음과 같이 수행할 수 있다.&lt;/p&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ microk8s.kubectl
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;하지만 이렇게 일일히 &lt;strong&gt;microk8s&lt;/strong&gt;명령을 수행하는 것은 번거롭기 때문에 &lt;code class=&quot;highlighter-rouge&quot;&gt;$ sudo -s&lt;/code&gt;를 통해 관리자 권한을 가지게 된다면 &lt;strong&gt;microk8s&lt;/strong&gt;명령을 생략하고 &lt;strong&gt;kubectl&lt;/strong&gt; 명령을 수행할 수 있다.&lt;/p&gt;
-
 &lt;p&gt;이제 kubernetes dashboad를 설치하러 가보자
 대시보드 UI는 기본으로 배포되지 않기 때문에 &lt;a href=&quot;https://kubernetes.io/ko/docs/tasks/access-application-cluster/web-ui-dashboard/&quot;&gt;쿠버네티스 대시보드 문서&lt;/a&gt; 를 참조하여 설치해 보도록 하겠다&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Install kubenetes dashboard
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0-beta4/aio/deploy/recommended.yaml
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ microk8s.kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0-beta4/aio/deploy/recommended.yaml
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
@@ -43,7 +41,7 @@
 &lt;p&gt;설치가 종료되면 접속을 위한 토큰을 아래 명령을 통해 미리 생성해 둔다&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;Bearer Token
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ kubectl -n kubernetes-dashboard describe secret $(kubectl -n kubernetes-dashboard get secret | grep admin-user | awk '{print $1}')
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ microk8s.kubectl -n kubernetes-dashboard describe secret $(kubectl -n kubernetes-dashboard get secret | grep admin-user | awk '{print $1}')
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
     &lt;p&gt;이 명령을 입력하면 아래와 같이 토큰이 나온다 &lt;br /&gt;&lt;/p&gt;
   &lt;/li&gt;
@@ -67,7 +65,7 @@ token:      eyJhbGciOiJSUzI1NiIsImtpZCI6IiJ9.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2V
 &lt;p&gt;토큰이 생성되었다면 프록시 명령을 통해 대시보드를 사용할 수 있다&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;kubectl proxy
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ kubectl proxy
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ microk8s.kubectl proxy
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
