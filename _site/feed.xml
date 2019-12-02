@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-11-29T10:11:40+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Paseul’s Devlog</title><subtitle>C#, Python, Docker, Kubernetes, Deep learning, Reinforcement learning</subtitle><author><name>Jaehoon Lee</name><email>machianb@naver.com</email></author><entry><title type="html">우분투 쿠버네티스 설치</title><link href="http://localhost:4000/ubuntu-kubernetes-install/" rel="alternate" type="text/html" title="우분투 쿠버네티스 설치" /><published>2019-11-28T00:00:00+09:00</published><updated>2019-11-28T00:00:00+09:00</updated><id>http://localhost:4000/ubuntu-kubernetes-install</id><content type="html" xml:base="http://localhost:4000/ubuntu-kubernetes-install/">&lt;h1 id=&quot;우분투-환경에서-쿠버네티스-설치하기dashboard-까지&quot;&gt;우분투 환경에서 쿠버네티스 설치하기(dashboard 까지)&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-02T23:16:54+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Paseul’s Devlog</title><subtitle>C#, Python, Docker, Kubernetes, Deep learning, Reinforcement learning</subtitle><author><name>Jaehoon Lee</name><email>machianb@naver.com</email></author><entry><title type="html">우분투 쿠버네티스 설치</title><link href="http://localhost:4000/ubuntu/ubuntu_kubernetes_install/" rel="alternate" type="text/html" title="우분투 쿠버네티스 설치" /><published>2019-11-28T00:00:00+09:00</published><updated>2019-11-28T00:00:00+09:00</updated><id>http://localhost:4000/ubuntu/ubuntu_kubernetes_install</id><content type="html" xml:base="http://localhost:4000/ubuntu/ubuntu_kubernetes_install/">&lt;h1 id=&quot;우분투-환경에서-쿠버네티스-설치하기dashboard-까지&quot;&gt;우분투 환경에서 쿠버네티스 설치하기(dashboard 까지)&lt;/h1&gt;
 
 &lt;p&gt;쿠버네티스를 설치하는 방법은 OS나 사용하는 플랫폼에 따라서 달라진다. &lt;br /&gt;
 본 포스팅에서는 우분투 환경에서 쿠버네티스를 설치하고 추가적으로 쿠버네티스 대시보드까지 설치해 보도록 하겠다. &lt;br /&gt;
@@ -74,32 +74,7 @@ token:      eyJhbGciOiJSUzI1NiIsImtpZCI6IiJ9.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2V
 
 &lt;p&gt;&lt;img src=&quot;https://d33wubrfki0l68.cloudfront.net/5f56e7ac82f10f46e70403a246c2b93efcf8b5b3/1c09f/images/docs/ui-dashboard-zerostate.png&quot; alt=&quot;웰컴 뷰&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;짜잔~! 대시보드를 확인할 수 있다&lt;/p&gt;</content><author><name>Jaehoon Lee</name><email>machianb@naver.com</email></author></entry><entry><title type="html">GAN 메인</title><link href="http://localhost:4000/gan-main/" rel="alternate" type="text/html" title="GAN 메인" /><published>2019-11-27T00:00:00+09:00</published><updated>2019-11-27T00:00:00+09:00</updated><id>http://localhost:4000/gan-main</id><content type="html" xml:base="http://localhost:4000/gan-main/">&lt;h1 id=&quot;생산적-적대-신경망generative-adversarial-networks-gan&quot;&gt;생산적 적대 신경망(generative adversarial networks, GAN)&lt;/h1&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;두 개 이상의 신경망이 서로를 향하게 하고, 서로 대항하듯이 훈련하게 함으로써, 결과적으로&lt;br /&gt; &lt;strong&gt;생성 모델(generative model)&lt;/strong&gt; 을 산출해 낸다&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://static.packt-cdn.com/products/9781789139907/graphics/1908d2b2-c04a-408d-9baf-f22b1bec49a0.png&quot; alt=&quot;GAN architecture&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;GAN의 구조는 생성기(generator)와 판별기(discriminator)라고 부르는 두 가지 신경망으로 구성되어 있다&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;생성기: 잠재 공간(latent space)에서 표본(samples)을 추출해 잠재 공간과 출력 간의 관계를 생성하는 역할 &lt;br /&gt; *한 모델 안에서 생성기와 판별기를 서로 연결해 적대 모드(adversarial mode)를 취하게 함으로써 생성기를 훈련&lt;/li&gt;
-  &lt;li&gt;판별기: 생성기를 훈련함으로써 훈련된 판별기와 서로 균형을 잡는 방법을 학습 &lt;br /&gt; &lt;em&gt;판별기가 너무 뛰어나면 생성기가 발산(알아보기 힘든 데이터를 생성)&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;gan-출력&quot;&gt;GAN 출력&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Style transfer: 입력 이미지에 특정 스타일을 적용시키는 방법으로 적은 사례(examples)을 요구하는 것이 특징&lt;/li&gt;
-  &lt;li&gt;DCGAN(deep convolution GAN): 입력 구문(input phrase)을 통해 출력 이미지를 생성&lt;/li&gt;
-  &lt;li&gt;SimGAN: 모조 이미지(simulated image)를 통해 레이블이 붙은 데이터를 자동으로 생성&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&quot;/network_1/&quot; class=&quot;btn btn--success btn--large&quot;&gt;네트워크 1장&lt;/a&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;출처: 실전 예제로 배우는 GAN, “위키북스”&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name>Jaehoon Lee</name><email>machianb@naver.com</email></author></entry><entry><title type="html">우분투 도커 설치</title><link href="http://localhost:4000/ubuntu-docker-install/" rel="alternate" type="text/html" title="우분투 도커 설치" /><published>2019-11-27T00:00:00+09:00</published><updated>2019-11-27T00:00:00+09:00</updated><id>http://localhost:4000/ubuntu-docker-install</id><content type="html" xml:base="http://localhost:4000/ubuntu-docker-install/">&lt;h1 id=&quot;우분투-도커-설치이미지-폴더-변경-까지&quot;&gt;우분투 도커 설치(이미지 폴더 변경 까지)&lt;/h1&gt;
+&lt;p&gt;짜잔~! 대시보드를 확인할 수 있다&lt;/p&gt;</content><author><name>Jaehoon Lee</name><email>machianb@naver.com</email></author><category term="Ubuntu" /><category term="Docker" /><category term="Kubernetes" /><category term="Dashboard" /></entry><entry><title type="html">우분투 도커 설치</title><link href="http://localhost:4000/ubuntu/ubuntu_docker_install/" rel="alternate" type="text/html" title="우분투 도커 설치" /><published>2019-11-27T00:00:00+09:00</published><updated>2019-11-27T00:00:00+09:00</updated><id>http://localhost:4000/ubuntu/ubuntu_docker_install</id><content type="html" xml:base="http://localhost:4000/ubuntu/ubuntu_docker_install/">&lt;h1 id=&quot;우분투-도커-설치이미지-폴더-변경-까지&quot;&gt;우분투 도커 설치(이미지 폴더 변경 까지)&lt;/h1&gt;
 
 &lt;p&gt;우분투 환경에서 도커를 설치하는 방법을 정리해 보고자 한다. 
 실행 환경: Ubuntu 18.04(LTS)
@@ -189,7 +164,32 @@ $ ps -ef | grep docker
 root      1442     1  0 11월27 ?      00:00:05 /usr/bin/dockerd -g /media/username/data/docker -H fd://
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;자신이 설정한 경로가 출력되는지 확인한다면 정상적으로 변경되었고 이제 마음것(?) 이미지를 생성할 수 있다!&lt;/p&gt;</content><author><name>Jaehoon Lee</name><email>machianb@naver.com</email></author></entry><entry><title type="html">네트워크 메인</title><link href="http://localhost:4000/network_main/" rel="alternate" type="text/html" title="네트워크 메인" /><published>2019-11-26T00:00:00+09:00</published><updated>2019-11-26T00:00:00+09:00</updated><id>http://localhost:4000/network_main</id><content type="html" xml:base="http://localhost:4000/network_main/">&lt;h1 id=&quot;네트워크와-관련된-내용을-포스팅-해갈-예정입니다&quot;&gt;네트워크와 관련된 내용을 포스팅 해갈 예정입니다&lt;/h1&gt;
+&lt;p&gt;자신이 설정한 경로가 출력되는지 확인한다면 정상적으로 변경되었고 이제 마음것(?) 이미지를 생성할 수 있다!&lt;/p&gt;</content><author><name>Jaehoon Lee</name><email>machianb@naver.com</email></author><category term="Ubuntu" /><category term="Docker" /></entry><entry><title type="html">GAN 메인</title><link href="http://localhost:4000/deeplearning/gan_main/" rel="alternate" type="text/html" title="GAN 메인" /><published>2019-11-27T00:00:00+09:00</published><updated>2019-11-27T00:00:00+09:00</updated><id>http://localhost:4000/deeplearning/gan_main</id><content type="html" xml:base="http://localhost:4000/deeplearning/gan_main/">&lt;h1 id=&quot;생산적-적대-신경망generative-adversarial-networks-gan&quot;&gt;생산적 적대 신경망(generative adversarial networks, GAN)&lt;/h1&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;두 개 이상의 신경망이 서로를 향하게 하고, 서로 대항하듯이 훈련하게 함으로써, 결과적으로&lt;br /&gt; &lt;strong&gt;생성 모델(generative model)&lt;/strong&gt; 을 산출해 낸다&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://static.packt-cdn.com/products/9781789139907/graphics/1908d2b2-c04a-408d-9baf-f22b1bec49a0.png&quot; alt=&quot;GAN architecture&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;GAN의 구조는 생성기(generator)와 판별기(discriminator)라고 부르는 두 가지 신경망으로 구성되어 있다&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;생성기: 잠재 공간(latent space)에서 표본(samples)을 추출해 잠재 공간과 출력 간의 관계를 생성하는 역할 &lt;br /&gt; *한 모델 안에서 생성기와 판별기를 서로 연결해 적대 모드(adversarial mode)를 취하게 함으로써 생성기를 훈련&lt;/li&gt;
+  &lt;li&gt;판별기: 생성기를 훈련함으로써 훈련된 판별기와 서로 균형을 잡는 방법을 학습 &lt;br /&gt; &lt;em&gt;판별기가 너무 뛰어나면 생성기가 발산(알아보기 힘든 데이터를 생성)&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;gan-출력&quot;&gt;GAN 출력&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Style transfer: 입력 이미지에 특정 스타일을 적용시키는 방법으로 적은 사례(examples)을 요구하는 것이 특징&lt;/li&gt;
+  &lt;li&gt;DCGAN(deep convolution GAN): 입력 구문(input phrase)을 통해 출력 이미지를 생성&lt;/li&gt;
+  &lt;li&gt;SimGAN: 모조 이미지(simulated image)를 통해 레이블이 붙은 데이터를 자동으로 생성&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;/network_1/&quot; class=&quot;btn btn--success btn--large&quot;&gt;네트워크 1장&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;출처: 실전 예제로 배우는 GAN, “위키북스”&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name>Jaehoon Lee</name><email>machianb@naver.com</email></author><category term="Deep Learning" /><category term="GAN" /><category term="generative adversarial networks" /></entry><entry><title type="html">네트워크 메인</title><link href="http://localhost:4000/network_main/" rel="alternate" type="text/html" title="네트워크 메인" /><published>2019-11-26T00:00:00+09:00</published><updated>2019-11-26T00:00:00+09:00</updated><id>http://localhost:4000/network_main</id><content type="html" xml:base="http://localhost:4000/network_main/">&lt;h1 id=&quot;네트워크와-관련된-내용을-포스팅-해갈-예정입니다&quot;&gt;네트워크와 관련된 내용을 포스팅 해갈 예정입니다&lt;/h1&gt;
 
 &lt;p&gt;&lt;a href=&quot;/network_1/&quot; class=&quot;btn btn--success btn--large&quot;&gt;네트워크 1장&lt;/a&gt;&lt;/p&gt;</content><author><name>Jaehoon Lee</name><email>machianb@naver.com</email></author></entry><entry><title type="html">네트워크 1장</title><link href="http://localhost:4000/network_1/" rel="alternate" type="text/html" title="네트워크 1장" /><published>2019-11-19T00:00:00+09:00</published><updated>2019-11-19T00:00:00+09:00</updated><id>http://localhost:4000/network_1</id><content type="html" xml:base="http://localhost:4000/network_1/">&lt;h2 id=&quot;lesson-1-정리&quot;&gt;Lesson 1 정리&lt;/h2&gt;
 &lt;ul&gt;
