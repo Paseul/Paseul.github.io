@@ -5,7 +5,7 @@ title_separator: '-'
 subtitle: null
 name: Jaehoon Lee
 description: 'C#, Python, Docker, Kubernetes, Deep learning, Reinforcement learning'
-url: 'https://paseul.github.io/network/'
+url: 'https://paseul.github.io/'
 baseurl: null
 repository: null
 teaser: null
@@ -80,10 +80,10 @@ footer:
   links:
     - label: Linkedin
       icon: fab fa-fw fa-linkedin
-      url: "https://www.linkedin.com/in/jaehoon265779188/"
+      url: 'https://www.linkedin.com/in/jaehoon265779188/'
     - label: GitHub
       icon: fab fa-fw fa-github
-      url: "https://github.com/paseul"
+      url: 'https://github.com/paseul'
 include:
   - .htaccess
   - _pages
@@ -121,7 +121,7 @@ markdown_ext: 'markdown,mkdown,mkdn,mkd,md'
 markdown: kramdown
 highlighter: rouge
 lsi: false
-excerpt_separator: |+
+excerpt_separator: ''
 incremental: false
 kramdown:
   input: GFM
