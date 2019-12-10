@@ -58,6 +58,13 @@ toc_label: 목차
 ![](/assets/images/DeepLearning/VGG16.png)
 
 ## ResNet
-잔차 신경망(Residual Neural Network: ResNet)
+2015년 ILSVRC 우승팀의 아키텍처. 잔차 신경망(Residual Neural Network: ResNet)은 연결 건너뛰기와 배치 정규화를 사용하는 새로운 CNN 아키텍처로서 이를 통해 VGG 네트워크보다 복잡성이 낮은데도 152층의 신경망을 훈련할 수 있었다. 
+
+![](/assets/images/DeepLearning/ResNet.png)
+
+## CapsNet
+캡슐 네트워크(CapsNet)는 CNN의 스칼라 출력 함수 감지기를 벡터 출력 캡슐로 대체한다. 또 라우팅별로 Max Pooling을 사용한다
+
+![](/assets/images/DeepLearning/CapsNet.jpg)
 
 > 출처: 딥러닝 전이학습, "위키북스"

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-10T10:22:44+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Paseul’s Devlog</title><subtitle>C#, Python, Docker, Kubernetes, Deep learning, Reinforcement learning</subtitle><author><name>Jaehoon Lee</name><email>machianb@naver.com</email></author><entry><title type="html">신경망 아키텍처</title><link href="http://localhost:4000/deeplearning/neural-network-architecture/" rel="alternate" type="text/html" title="신경망 아키텍처" /><published>2019-12-09T00:00:00+09:00</published><updated>2019-12-09T00:00:00+09:00</updated><id>http://localhost:4000/deeplearning/neural-network-architecture</id><content type="html" xml:base="http://localhost:4000/deeplearning/neural-network-architecture/">&lt;h1 id=&quot;신경망-아키텍처&quot;&gt;신경망 아키텍처&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-10T14:23:00+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Paseul’s Devlog</title><subtitle>C#, Python, Docker, Kubernetes, Deep learning, Reinforcement learning</subtitle><author><name>Jaehoon Lee</name><email>machianb@naver.com</email></author><entry><title type="html">신경망 아키텍처</title><link href="http://localhost:4000/deeplearning/neural-network-architecture/" rel="alternate" type="text/html" title="신경망 아키텍처" /><published>2019-12-09T00:00:00+09:00</published><updated>2019-12-09T00:00:00+09:00</updated><id>http://localhost:4000/deeplearning/neural-network-architecture</id><content type="html" xml:base="http://localhost:4000/deeplearning/neural-network-architecture/">&lt;h1 id=&quot;신경망-아키텍처&quot;&gt;신경망 아키텍처&lt;/h1&gt;
 &lt;h2 id=&quot;mlp&quot;&gt;MLP&lt;/h2&gt;
 &lt;p&gt;다층 퍼셉트론(multilayer perceptron, MLP)은 신경망 아키텍처의 가장 기본적인 형태로서 신경 유닛은 층층이 배열되고 인접한 네트워크 층은 전체가 모두 연결된다&lt;/p&gt;
 
@@ -44,7 +44,14 @@
 &lt;p&gt;&lt;img src=&quot;/assets/images/DeepLearning/VGG16.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;resnet&quot;&gt;ResNet&lt;/h2&gt;
-&lt;p&gt;잔차 신경망(Residual Neural Network: ResNet)&lt;/p&gt;
+&lt;p&gt;2015년 ILSVRC 우승팀의 아키텍처. 잔차 신경망(Residual Neural Network: ResNet)은 연결 건너뛰기와 배치 정규화를 사용하는 새로운 CNN 아키텍처로서 이를 통해 VGG 네트워크보다 복잡성이 낮은데도 152층의 신경망을 훈련할 수 있었다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/DeepLearning/ResNet.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;capsnet&quot;&gt;CapsNet&lt;/h2&gt;
+&lt;p&gt;캡슐 네트워크(CapsNet)는 CNN의 스칼라 출력 함수 감지기를 벡터 출력 캡슐로 대체한다. 또 라우팅별로 Max Pooling을 사용한다&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/DeepLearning/CapsNet.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;출처: 딥러닝 전이학습, “위키북스”&lt;/p&gt;
