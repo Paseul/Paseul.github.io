@@ -1,0 +1,17 @@
+I"+<ul class="toc__menu">
+  <li><a href="#신경망-아키텍처">신경망 아키텍처</a>
+    <ul>
+      <li><a href="#mlp">MLP</a></li>
+      <li><a href="#autoencoder">Autoencoder</a></li>
+      <li><a href="#vaes">VAEs</a></li>
+      <li><a href="#gan">GAN</a></li>
+      <li><a href="#lenet">LeNet</a></li>
+      <li><a href="#alexnet">AlexNet</a></li>
+      <li><a href="#zfnet">ZFNet</a></li>
+      <li><a href="#googlenet">GoogLeNet</a></li>
+      <li><a href="#vgg">VGG</a></li>
+      <li><a href="#resnet">ResNet</a></li>
+    </ul>
+  </li>
+</ul>
+:ET

@@ -1,0 +1,15 @@
+I",<ul class="toc__menu">
+  <li><a href="#신경망-아키텍처">신경망 아키텍처</a>
+    <ul>
+      <li><a href="#다층-퍼셉트론multilayer-perceptron-mlp">다층 퍼셉트론(multilayer perceptron, MLP)</a></li>
+      <li><a href="#오토인코더-신경망autoencoder">오토인코더 신경망(Autoencoder)</a></li>
+      <li><a href="#변분-오토인코더variational-autoencoders-vaes">변분 오토인코더(variational autoencoders, VAEs)</a></li>
+      <li><a href="#적대적-신경망generatice-adversarial-networks-gan">적대적 신경망(Generatice Adversarial Networks, GAN)</a></li>
+      <li><a href="#lenet">LeNet</a></li>
+      <li><a href="#alexnet">AlexNet</a></li>
+      <li><a href="#zfnet">ZFNet</a></li>
+      <li><a href="#googlenet">GoogLeNet</a></li>
+    </ul>
+  </li>
+</ul>
+:ET
