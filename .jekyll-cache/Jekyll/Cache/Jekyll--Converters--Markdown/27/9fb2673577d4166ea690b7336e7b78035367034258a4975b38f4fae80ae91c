@@ -1,4 +1,4 @@
-I"+<ul class="toc__menu">
+I"�<ul class="toc__menu">
   <li><a href="#신경망-아키텍처">신경망 아키텍처</a>
     <ul>
       <li><a href="#mlp">MLP</a></li>
@@ -11,6 +11,11 @@
       <li><a href="#googlenet">GoogLeNet</a></li>
       <li><a href="#vgg">VGG</a></li>
       <li><a href="#resnet">ResNet</a></li>
+      <li><a href="#capsnet">CapsNet</a></li>
+      <li><a href="#rnn">RNN</a></li>
+      <li><a href="#lstm">LSTM</a></li>
+      <li><a href="#nmt">NMT</a></li>
+      <li><a href="#gru">GRU</a></li>
     </ul>
   </li>
 </ul>
