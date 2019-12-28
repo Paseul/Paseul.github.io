@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-28T09:30:48+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Paseul’s Devlog</title><subtitle>C#, Python, Docker, Kubernetes, Deep learning, Reinforcement learning</subtitle><author><name>Jaehoon Lee</name><email>machianb@naver.com</email></author><entry><title type="html">5G 국제 표준의 이해</title><link href="http://localhost:4000/networks/5g-nr-standards/" rel="alternate" type="text/html" title="5G 국제 표준의 이해" /><published>2019-12-27T00:00:00+09:00</published><updated>2019-12-27T00:00:00+09:00</updated><id>http://localhost:4000/networks/5g-nr-standards</id><content type="html" xml:base="http://localhost:4000/networks/5g-nr-standards/">&lt;p&gt;본 포스팅은 삼성에서 제공한 &lt;a href=&quot;https://images.samsung.com/is/content/samsung/p5/global/business/networks/insights/white-paper/who-and-how_making-5g-nr-standards/who-and-how_making-5g-nr-standards_KR.pdf&quot;&gt;5G 국제 표준의 이해&lt;/a&gt;를 요약 정리한 포스팅 입니다&lt;/p&gt;
-&lt;h2 id=&quot;5g-nrnew-radio-표준&quot;&gt;5G NR(New Radio) 표준&lt;/h2&gt;
-&lt;h3 id=&quot;표준&quot;&gt;&lt;strong&gt;표준&lt;/strong&gt;&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-28T10:02:02+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Paseul’s Devlog</title><subtitle>C#, Python, Docker, Kubernetes, Deep learning, Reinforcement learning</subtitle><author><name>Jaehoon Lee</name><email>machianb@naver.com</email></author><entry><title type="html">5G 국제 표준의 이해</title><link href="http://localhost:4000/networks/5g-nr-standards/" rel="alternate" type="text/html" title="5G 국제 표준의 이해" /><published>2019-12-27T00:00:00+09:00</published><updated>2019-12-27T00:00:00+09:00</updated><id>http://localhost:4000/networks/5g-nr-standards</id><content type="html" xml:base="http://localhost:4000/networks/5g-nr-standards/">&lt;p&gt;본 포스팅은 삼성에서 제공한 &lt;a href=&quot;https://images.samsung.com/is/content/samsung/p5/global/business/networks/insights/white-paper/who-and-how_making-5g-nr-standards/who-and-how_making-5g-nr-standards_KR.pdf&quot;&gt;5G 국제 표준의 이해&lt;/a&gt;를 요약 정리한 포스팅 입니다&lt;/p&gt;
+&lt;h1 id=&quot;5g-nrnew-radio-표준&quot;&gt;5G NR(New Radio) 표준&lt;/h1&gt;
+&lt;h2 id=&quot;표준의-정의&quot;&gt;&lt;strong&gt;표준의 정의&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;표준(Standardization)을 통하여 특정 국가나 사업자에게만 특화된 제품이 아니라 전세계에서 통용되는 제품을 생산할 수 있게 된다.
-과거에는 국가별, 제조사별, 표준화 단체별로 제품을 개발하여 시장을 많이 점유한 기술이 사실상(De-facto) 국제표준이 되기도 했으나 최근에는 이러한 규격을 표준화하여 국제적으로 합의된 국제 표준을 사용하고 있다.&lt;br /&gt;&lt;/p&gt;
+과거에는 국가별, 제조사별, 표준화 단체별로 제품을 개발하여 시장을 많이 점유한 기술이 사실상(De-facto) 국제표준이 되기도 했으나 &lt;span style=&quot;color:#F9E79F&quot;&gt;최근에는 이러한 규격을 표준화하여 국제적으로 합의된 국제 표준을 사용하고 있다.&lt;/span&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -23,46 +23,46 @@
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Generation 구분:&lt;/strong&gt;  각 세대를 구분 짓는 것은 새로운 서비스가 아니라, 그런 서비스를 가능하게 한 &lt;strong&gt;‘기술적 혁신’&lt;/strong&gt; 새로운 이동통신 기술 혁신들은 바로 각 세대의 &lt;strong&gt;“표준”&lt;/strong&gt;에 의해 정의되어 왔다.&lt;br /&gt;&lt;/p&gt;
-&lt;h3 id=&quot;5g-표준&quot;&gt;&lt;strong&gt;5G 표준&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;span style=&quot;color:yellow&quot;&gt;&lt;strong&gt;Generation 구분:&lt;/strong&gt;&lt;/span&gt;  각 세대를 구분 짓는 것은 새로운 서비스가 아니라, 그런 서비스를 가능하게 한 &lt;span style=&quot;color:#F9E79F&quot;&gt;&lt;strong&gt;‘기술적 혁신’&lt;/strong&gt;&lt;/span&gt; 새로운 이동통신 기술 혁신들은 바로 각 세대의 &lt;span style=&quot;color:#F9E79F&quot;&gt;&lt;strong&gt;“표준”&lt;/strong&gt;에 의해 정의되어 왔다.&lt;/span&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;5g-표준&quot;&gt;&lt;strong&gt;5G 표준&lt;/strong&gt;&lt;/h2&gt;
 &lt;center&gt;&lt;img src=&quot;/assets/images/Networks/ITU-3GPP_relationship.PNG&quot; width=&quot;60%&quot; /&gt;&lt;/center&gt;
 
-&lt;dl&gt;
-  &lt;dt&gt;&lt;strong&gt;ITU(국제 전기 통신 연합, International Telecommunication Union)&lt;/strong&gt; 에서 비전 및 목표를 제시하고  &lt;strong&gt;국제 표준화 단체(3GPP)&lt;/strong&gt; 에서 기술 표준 개발&lt;/dt&gt;
-  &lt;dt&gt;&lt;strong&gt;3GPP&lt;/strong&gt;는 전세계 이동통신 사업자, 장비 제조사, 단말 제조사, 칩 제조사 및 세계 각국의 표준화 단체와 연구기관 등 약 500여개 업체가 참여하는 최대 국제 이동통신 표준화 단체&lt;br /&gt;&lt;/dt&gt;
-  &lt;dt&gt;&lt;strong&gt;5G 표준의 특징&lt;/strong&gt;&lt;/dt&gt;
-  &lt;dt&gt;1) 초 광대역 서비스 (eMBB: enhanced Mobile Broadband)&lt;/dt&gt;
-  &lt;dd&gt;사용자당 100Mbps에서 최대 20Gbps까지 훨씬 빠른 데이터 전송속도 제공을 목표
-2) 고신뢰/초저지연 통신 (URLLC: Ultra Reliable &amp;amp; Low Latency Communications)&lt;/dd&gt;
-  &lt;dd&gt;기존 수십 밀리 세컨드 (1ms = 1/1000 초) 걸리던 지연 시간을 1ms 수준으로 최소화하는 것을 목표
-3) 대량연결 (mMTC: Machine-Type Communications)&lt;/dd&gt;
-  &lt;dd&gt;1 km2 면적 당1백만개의 연결(connection)을 지원하는 것을 목표&lt;/dd&gt;
-&lt;/dl&gt;
+&lt;p&gt;&lt;span style=&quot;color:#F9E79F&quot;&gt;&lt;strong&gt;ITU(국제 전기 통신 연합, International Telecommunication Union)&lt;/strong&gt;&lt;/span&gt; 에서 비전 및 목표를 제시하고  &lt;span style=&quot;color:#F9E79F&quot;&gt;&lt;strong&gt;국제 표준화 단체(3GPP)&lt;/strong&gt;&lt;/span&gt; 에서 기술 표준 개발
+&lt;span style=&quot;color:#F9E79F&quot;&gt;&lt;strong&gt;3GPP&lt;/strong&gt;&lt;/span&gt;는 전세계 이동통신 사업자, 장비 제조사, 단말 제조사, 칩 제조사 및 세계 각국의 표준화 단체와 연구기관 등 약 500여개 업체가 참여하는 최대 국제 이동통신 표준화 단체&lt;br /&gt;&lt;br /&gt;
+&lt;span style=&quot;color:yellow&quot;&gt;&lt;strong&gt;5G 표준의 특징&lt;/strong&gt;&lt;/span&gt;&lt;br /&gt;
+1) &lt;span style=&quot;color:#F9E79F&quot;&gt;초 광대역 서비스 (eMBB: enhanced Mobile Broadband):&lt;/span&gt; 사용자당 100Mbps에서 최대 20Gbps까지 훨씬 빠른 데이터 전송속도 제공을 목표&lt;br /&gt;
+2) &lt;span style=&quot;color:#F9E79F&quot;&gt;고신뢰/초저지연 통신 (URLLC: Ultra Reliable &amp;amp; Low Latency Communications):&lt;/span&gt; 기존 수십 밀리 세컨드 (1ms = 1/1000 초) 걸리던 지연 시간을 1ms 수준으로 최소화하는 것을 목표&lt;br /&gt;
+3) &lt;span style=&quot;color:#F9E79F&quot;&gt;대량연결 (mMTC: Machine-Type Communications):&lt;/span&gt; 1 km2 면적 당1백만개의 연결(connection)을 지원하는 것을 목표&lt;br /&gt;&lt;/p&gt;
 
 &lt;center&gt;&lt;img src=&quot;/assets/images/Networks/4Gvs5G.PNG&quot; width=&quot;70%&quot; /&gt;&lt;/center&gt;
-&lt;p&gt;&lt;em&gt;4G LTE도 초기 상용화 시점(2010년 경) 당시 최대속도가 75Mbps였고 2018년에야 목표성능 1Gbps 상용이 가능 했고 5G도 마찬가지일 것으로 예상된다&lt;/em&gt;&lt;br /&gt;
-&lt;em&gt;4G의 주파수 대역은  6GHz 이하(Below 6GHz)였지만 28GHz와 39GHz 등 밀리미터파(mmWave)로 불리는 초고주파 대역(Above 6GHz)까지 함께 사용하게 된다&lt;/em&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;color:#F9E79F&quot;&gt;&lt;em&gt;4G LTE도 초기 상용화 시점(2010년 경) 당시 최대속도가 75Mbps였고 2018년에야 목표성능 1Gbps 상용이 가능 했고 5G도 마찬가지일 것으로 예상된다&lt;/em&gt;&lt;/span&gt;&lt;br /&gt;
+&lt;span style=&quot;color:#F9E79F&quot;&gt;&lt;em&gt;4G의 주파수 대역은  6GHz 이하(Below 6GHz)였지만 28GHz와 39GHz 등 밀리미터파(mmWave)로 불리는 초고주파 대역(Above 6GHz)까지 함께 사용하게 된다&lt;/em&gt;&lt;/span&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;빔 포밍 기술:&lt;/strong&gt; 많은 수의 안테나에 실리는 신호를 각각 정밀하게 제어하여 특정 방향으로 에너지를 집중시키거나 또는 반대로 특정 방향으로는 에너지가 가지 않도록 조절이 가능한 기술. 전파의 에너지를 집중시켜 거리를 늘리고 빔(Beam)간에는 간섭을 최소화 시킬 수 있다. 이렇게 예리한 빔을 계속 정확하게 추적(tracking) 해야 하는 것이 기술적 관건이 된다.&lt;/li&gt;
+  &lt;li&gt;&lt;span style=&quot;color:yellow&quot;&gt;&lt;strong&gt;빔 포밍 기술:&lt;/strong&gt;&lt;/span&gt; 많은 수의 안테나에 실리는 신호를 각각 정밀하게 제어하여 특정 방향으로 에너지를 집중시키거나 또는 반대로 특정 방향으로는 에너지가 가지 않도록 조절이 가능한 기술. 전파의 에너지를 집중시켜 거리를 늘리고 빔(Beam)간에는 간섭을 최소화 시킬 수 있다. 이렇게 예리한 빔을 계속 정확하게 추적(tracking) 해야 하는 것이 기술적 관건이 된다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;center&gt;&lt;img src=&quot;/assets/images/Networks/Beamforming.PNG&quot; width=&quot;80%&quot; /&gt;&lt;/center&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Massive MIMO:&lt;/strong&gt; 수 많은 안테나 배열(Massive Antenna Array)을 활용하여 같은 무선 자원을 여러명이 동시에 사용하는 기술. 4G에서의 MIMO기술은 1차원(1D) 안테나 배열을 사용하였기 때문에 자유도(degree of freedom)가 낮아 수평방향(horizontal)사용자만 구분 했지만 5G에서는 수십개 이상의 안테나를 2차원(2D)으로 배치해 수직-수평(horizontal &amp;amp; vertical)방향 모두 사용자를 구분할 수 있다.&lt;/li&gt;
+  &lt;li&gt;&lt;span style=&quot;color:yellow&quot;&gt;&lt;strong&gt;Massive MIMO:&lt;/strong&gt;&lt;/span&gt; 수 많은 안테나 배열(Massive Antenna Array)을 활용하여 같은 무선 자원을 여러명이 동시에 사용하는 기술. 4G에서의 MIMO기술은 1차원(1D) 안테나 배열을 사용하였기 때문에 자유도(degree of freedom)가 낮아 수평방향(horizontal)사용자만 구분 했지만 5G에서는 수십개 이상의 안테나를 2차원(2D)으로 배치해 수직-수평(horizontal &amp;amp; vertical)방향 모두 사용자를 구분할 수 있다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;center&gt;&lt;img src=&quot;/assets/images/Networks/MassiveMIMO.PNG&quot; width=&quot;80%&quot; /&gt;&lt;/center&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Network Slicing:&lt;/strong&gt; 4G에서는 Voice와 Data 서비스로 구분해서 Voice에 대해서만 별도의 Qos(Quality-of-Service)를 제공했지만, 5G에서는 네트워크 슬라이싱을 통해 각각의 Data 서비스들도 독립적인 네트워크 자원 할당이 가능하고 따라서 각 서비스별로 다른 서비스의 영향을 받지 않으면서 품질을 보장할 수 있다. &lt;strong&gt;특히, 시간지연에 민감한 서비스(Mission Critical Service)들의 품질을 보장할수 있게 되어 이동통신 사업자는 특화 서비스에 대한 별도의 과금체계도 도입할 수 있다.&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;span style=&quot;color:yellow&quot;&gt;&lt;strong&gt;Network Slicing:&lt;/strong&gt;&lt;/span&gt; 4G에서는 Voice와 Data 서비스로 구분해서 Voice에 대해서만 별도의 Qos(Quality-of-Service)를 제공했지만, 5G에서는 네트워크 슬라이싱을 통해 각각의 Data 서비스들도 독립적인 네트워크 자원 할당이 가능하고 따라서 각 서비스별로 다른 서비스의 영향을 받지 않으면서 품질을 보장할 수 있다. &lt;span style=&quot;color:#F9E79F&quot;&gt;&lt;em&gt;특히, 시간지연에 민감한 서비스(Mission Critical Service)들의 품질을 보장할수 있게 되어 이동통신 사업자는 특화 서비스에 대한 별도의 과금체계도 도입할 수 있다.&lt;/em&gt;&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;center&gt;&lt;img src=&quot;/assets/images/Networks/NetworkSlicing.PNG&quot; width=&quot;80%&quot; /&gt;&lt;/center&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;NSA와 SA:&lt;/strong&gt; NAS(Non-Standalone)는 초기 상용망에 구현괄 것으로 예상되는 구조로, 단말의 이동성(mobility) 관리 등을 제어하는 제어 플레인(control plane)의 동작은 4G LTE 망을 활용하면서 사용자 플레인(User plane/Data plane)에 해당하는 데이터 트래픽은 5G 망으로 주고 받는다. SA(Standalone) 구조는 제어 채널이나 데이터 채널 모두 5G의 자체구조를 사용하는 구조이다.&lt;/li&gt;
+  &lt;li&gt;&lt;span style=&quot;color:yellow&quot;&gt;&lt;strong&gt;NSA와 SA:&lt;/strong&gt;&lt;/span&gt; NAS(Non-Standalone)는 초기 상용망에 구현괄 것으로 예상되는 구조로, 단말의 이동성(mobility) 관리 등을 제어하는 제어 플레인(control plane)의 동작은 4G LTE 망을 활용하면서 사용자 플레인(User plane/Data plane)에 해당하는 데이터 트래픽은 5G 망으로 주고 받는다. SA(Standalone) 구조는 제어 채널이나 데이터 채널 모두 5G의 자체구조를 사용하는 구조이다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;center&gt;&lt;img src=&quot;/assets/images/Networks/NSA-SA.PNG&quot; width=&quot;80%&quot; /&gt;&lt;/center&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;표준의 Release 개념:&lt;/strong&gt; &lt;strong&gt;Release는 3GPP의 시간 스케쥴이다.&lt;/strong&gt; 이동통신 국제 표준은 단기간에 1회성으로 정해지는 것이 아니며 장기간에 걸쳐 수 차례 업그레이드 된다. 다음 세대가 나오더라도 수년정도는 이전 세대 기술이 계속 보완하여 발표(Release) 한다.&lt;/li&gt;
+  &lt;li&gt;&lt;span style=&quot;color:yellow&quot;&gt;&lt;strong&gt;표준의 Release 개념:&lt;/strong&gt;&lt;/span&gt; &lt;span style=&quot;color:#F9E79F&quot;&gt;&lt;strong&gt;Release는 3GPP의 시간 스케쥴이다.&lt;/strong&gt;&lt;/span&gt; 이동통신 국제 표준은 단기간에 1회성으로 정해지는 것이 아니며 장기간에 걸쳐 수 차례 업그레이드 된다. 다음 세대가 나오더라도 수년정도는 이전 세대 기술이 계속 보완하여 발표(Release) 한다.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;center&gt;&lt;img src=&quot;/assets/images/Networks/Release.PNG&quot; width=&quot;80%&quot; /&gt;&lt;/center&gt;</content><author><name>Jaehoon Lee</name><email>machianb@naver.com</email></author><category term="Networks" /></entry><entry><title type="html">신경망 아키텍처</title><link href="http://localhost:4000/deeplearning/neural-network-architecture/" rel="alternate" type="text/html" title="신경망 아키텍처" /><published>2019-12-09T00:00:00+09:00</published><updated>2019-12-09T00:00:00+09:00</updated><id>http://localhost:4000/deeplearning/neural-network-architecture</id><content type="html" xml:base="http://localhost:4000/deeplearning/neural-network-architecture/">&lt;h1 id=&quot;신경망-아키텍처&quot;&gt;신경망 아키텍처&lt;/h1&gt;
+&lt;center&gt;&lt;img src=&quot;/assets/images/Networks/Release.PNG&quot; width=&quot;80%&quot; /&gt;&lt;/center&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name>Jaehoon Lee</name><email>machianb@naver.com</email></author><category term="Networks" /></entry><entry><title type="html">신경망 아키텍처</title><link href="http://localhost:4000/deeplearning/neural-network-architecture/" rel="alternate" type="text/html" title="신경망 아키텍처" /><published>2019-12-09T00:00:00+09:00</published><updated>2019-12-09T00:00:00+09:00</updated><id>http://localhost:4000/deeplearning/neural-network-architecture</id><content type="html" xml:base="http://localhost:4000/deeplearning/neural-network-architecture/">&lt;h1 id=&quot;신경망-아키텍처&quot;&gt;신경망 아키텍처&lt;/h1&gt;
 &lt;h2 id=&quot;mlp&quot;&gt;MLP&lt;/h2&gt;
 &lt;p&gt;다층 퍼셉트론(multilayer perceptron, MLP)은 신경망 아키텍처의 가장 기본적인 형태로서 신경 유닛은 층층이 배열되고 인접한 네트워크 층은 전체가 모두 연결된다&lt;/p&gt;
 
