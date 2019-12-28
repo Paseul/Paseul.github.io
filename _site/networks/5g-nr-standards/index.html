@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>신경망 아키텍처 - Paseul’s Devlog</title>
+<!-- begin _includes/seo.html --><title>5G 국제 표준의 이해 - Paseul’s Devlog</title>
 <meta name="description" content="C#, Python, Docker, Kubernetes, Deep learning, Reinforcement learning">
 
 
@@ -19,8 +19,8 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="Paseul's Devlog">
-<meta property="og:title" content="신경망 아키텍처">
-<meta property="og:url" content="http://localhost:4000/deeplearning/neural-network-architecture/">
+<meta property="og:title" content="5G 국제 표준의 이해">
+<meta property="og:url" content="http://localhost:4000/networks/5g-nr-standards/">
 
 
   <meta property="og:description" content="C#, Python, Docker, Kubernetes, Deep learning, Reinforcement learning">
@@ -33,14 +33,14 @@
 
 
 
-  <meta property="article:published_time" content="2019-12-09T00:00:00+09:00">
+  <meta property="article:published_time" content="2019-12-27T00:00:00+09:00">
 
 
 
 
 
 
-<link rel="canonical" href="http://localhost:4000/deeplearning/neural-network-architecture/">
+<link rel="canonical" href="http://localhost:4000/networks/5g-nr-standards/">
 
 
 
@@ -165,15 +165,15 @@
   
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="신경망 아키텍처">
+    <meta itemprop="headline" content="5G 국제 표준의 이해">
     <meta itemprop="description" content="">
-    <meta itemprop="datePublished" content="December 09, 2019">
+    <meta itemprop="datePublished" content="December 27, 2019">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">신경망 아키텍처
+          <h1 id="page-title" class="page__title" itemprop="headline">5G 국제 표준의 이해
 </h1>
           
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
@@ -181,7 +181,7 @@
 
 
 
-  3 분 소요
+  2 분 소요
 
 </p>
           
@@ -190,111 +190,71 @@
 
       <section class="page__content" itemprop="text">
         
-          <aside class="sidebar__right sticky">
-            <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> 목차</h4></header>
-              <ul class="toc__menu">
-  <li><a href="#신경망-아키텍처">신경망 아키텍처</a>
-    <ul>
-      <li><a href="#mlp">MLP</a></li>
-      <li><a href="#autoencoder">Autoencoder</a></li>
-      <li><a href="#vaes">VAEs</a></li>
-      <li><a href="#gan">GAN</a></li>
-      <li><a href="#lenet">LeNet</a></li>
-      <li><a href="#alexnet">AlexNet</a></li>
-      <li><a href="#zfnet">ZFNet</a></li>
-      <li><a href="#googlenet">GoogLeNet</a></li>
-      <li><a href="#vgg">VGG</a></li>
-      <li><a href="#resnet">ResNet</a></li>
-      <li><a href="#capsnet">CapsNet</a></li>
-      <li><a href="#rnn">RNN</a></li>
-      <li><a href="#lstm">LSTM</a></li>
-      <li><a href="#nmt">NMT</a></li>
-      <li><a href="#gru">GRU</a></li>
-    </ul>
-  </li>
+        <p>본 포스팅은 삼성에서 제공한 <a href="https://images.samsung.com/is/content/samsung/p5/global/business/networks/insights/white-paper/who-and-how_making-5g-nr-standards/who-and-how_making-5g-nr-standards_KR.pdf">5G 국제 표준의 이해</a>를 요약 정리한 포스팅 입니다</p>
+<h2 id="5g-nrnew-radio-표준">5G NR(New Radio) 표준</h2>
+<h3 id="표준"><strong>표준</strong></h3>
+<p>표준(Standardization)을 통하여 특정 국가나 사업자에게만 특화된 제품이 아니라 전세계에서 통용되는 제품을 생산할 수 있게 된다.
+과거에는 국가별, 제조사별, 표준화 단체별로 제품을 개발하여 시장을 많이 점유한 기술이 사실상(De-facto) 국제표준이 되기도 했으나 최근에는 이러한 규격을 표준화하여 국제적으로 합의된 국제 표준을 사용하고 있다.<br /></p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">국제 표준을 통해</th>
+      <th style="text-align: center">R&amp;D 비용 절감</th>
+      <th style="text-align: center">소비자는</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">통신기능 주체간에 정보교환 및 신호 처리가 가능</td>
+      <td style="text-align: center">제조사는 대량생산, 중복투자 방지, 기술이전, 가능</td>
+      <td style="text-align: center">제조사간의 경쟁을 통해 가성비 높은 제품을 확보</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br /></p>
+
+<p><strong>Generation 구분:</strong>  각 세대를 구분 짓는 것은 새로운 서비스가 아니라, 그런 서비스를 가능하게 한 <strong>‘기술적 혁신’</strong> 새로운 이동통신 기술 혁신들은 바로 각 세대의 <strong>“표준”</strong>에 의해 정의되어 왔다.<br /></p>
+<h3 id="5g-표준"><strong>5G 표준</strong></h3>
+<center><img src="/assets/images/Networks/ITU-3GPP_relationship.PNG" width="60%" /></center>
+
+<dl>
+  <dt><strong>ITU(국제 전기 통신 연합, International Telecommunication Union)</strong> 에서 비전 및 목표를 제시하고  <strong>국제 표준화 단체(3GPP)</strong> 에서 기술 표준 개발</dt>
+  <dt><strong>3GPP</strong>는 전세계 이동통신 사업자, 장비 제조사, 단말 제조사, 칩 제조사 및 세계 각국의 표준화 단체와 연구기관 등 약 500여개 업체가 참여하는 최대 국제 이동통신 표준화 단체<br /></dt>
+  <dt><strong>5G 표준의 특징</strong></dt>
+  <dt>1) 초 광대역 서비스 (eMBB: enhanced Mobile Broadband)</dt>
+  <dd>사용자당 100Mbps에서 최대 20Gbps까지 훨씬 빠른 데이터 전송속도 제공을 목표
+2) 고신뢰/초저지연 통신 (URLLC: Ultra Reliable &amp; Low Latency Communications)</dd>
+  <dd>기존 수십 밀리 세컨드 (1ms = 1/1000 초) 걸리던 지연 시간을 1ms 수준으로 최소화하는 것을 목표
+3) 대량연결 (mMTC: Machine-Type Communications)</dd>
+  <dd>1 km2 면적 당1백만개의 연결(connection)을 지원하는 것을 목표</dd>
+</dl>
+
+<center><img src="/assets/images/Networks/4Gvs5G.PNG" width="70%" /></center>
+<p><em>4G LTE도 초기 상용화 시점(2010년 경) 당시 최대속도가 75Mbps였고 2018년에야 목표성능 1Gbps 상용이 가능 했고 5G도 마찬가지일 것으로 예상된다</em><br />
+<em>4G의 주파수 대역은  6GHz 이하(Below 6GHz)였지만 28GHz와 39GHz 등 밀리미터파(mmWave)로 불리는 초고주파 대역(Above 6GHz)까지 함께 사용하게 된다</em><br /></p>
+
+<ul>
+  <li><strong>빔 포밍 기술:</strong> 많은 수의 안테나에 실리는 신호를 각각 정밀하게 제어하여 특정 방향으로 에너지를 집중시키거나 또는 반대로 특정 방향으로는 에너지가 가지 않도록 조절이 가능한 기술. 전파의 에너지를 집중시켜 거리를 늘리고 빔(Beam)간에는 간섭을 최소화 시킬 수 있다. 이렇게 예리한 빔을 계속 정확하게 추적(tracking) 해야 하는 것이 기술적 관건이 된다.</li>
 </ul>
-            </nav>
-          </aside>
-        
-        <h1 id="신경망-아키텍처">신경망 아키텍처</h1>
-<h2 id="mlp">MLP</h2>
-<p>다층 퍼셉트론(multilayer perceptron, MLP)은 신경망 아키텍처의 가장 기본적인 형태로서 신경 유닛은 층층이 배열되고 인접한 네트워크 층은 전체가 모두 연결된다</p>
-
-<p><img src="https://missinglink.ai/wp-content/uploads/2018/11/multilayer-perceptron.png" alt="출처: https://missinglink.ai/guides/neural-network-concepts/perceptrons-and-multi-layer-perceptrons-the-artificial-neuron-at-the-core-of-deep-learning/" /></p>
-
-<h2 id="autoencoder">Autoencoder</h2>
-<p>오토인코더 신경망(Autoencoder)의 목표값은 입력값과 동일하게 설정된다. 은닉층당 유닛 수가 점진적으로 증가하기 전에 특정 시점까지 점진적으로 감소하고, 최종 층의 차원은 입력 차원과 동일하다. 은닉층의 앞쪽 절반을 인코더(encoder) 뒤쪽 절반을 디코더(decoder)라고 한다.</p>
-
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Autoencoder_structure.png/350px-Autoencoder_structure.png" alt="출처: https://en.wikipedia.org/wiki/Autoencoder" /></p>
-<h2 id="vaes">VAEs</h2>
-<p>변분 오토인코더(variational autoencoders, VAEs)의 디코더 부분은 오토 인코더와 동일하고 인코더 부분에서 확률층(noise)를 추가하여 여러 샘플을 얻어서 최대 가능도로 손실함수를 도출한다</p>
-
-<p><img src="https://miro.medium.com/max/1664/1*eRcdr8gczweQHk--1pZF9A@2x.png" alt="출처: https://towardsdatascience.com/understanding-variational-autoencoders-vaes-f70510919f73" /></p>
-
-<h2 id="gan">GAN</h2>
-<p>적대적 신경망(Generatice Adversarial Networks, GAN)에는 생성기 신경망과 판별기 신경망이 있다. 생성기 네트워크는 임의의 소음을 입력받아 데이터 샘플을 생성하려고 시도한다. 판별기 네트워크는 생성된 데이터를 실제 데이터와 비교하고 생성된 데이터가 가짜인지 아닌지에 대한 이진 분류 문제를 시그모이드 출력 활성화를 사용해 해결한다.</p>
-
-<p><img src="https://developers.google.com/machine-learning/gan/images/gan_diagram_discriminator.svg" alt="출처: https://developers.google.com/machine-learning/gan/discriminator" /></p>
-
-<h2 id="lenet">LeNet</h2>
-<p>1998년에 설계한 7단계 합성곱 네트워크로, 숫자 분류에 사용된다.</p>
-
-<p><img src="https://notebooks.azure.com/rodolfoferro/libraries/KerasMNIST/raw/LeNet-5.png" alt="출처: https://notebooks.azure.com/rodolfoferro/projects/KerasMNIST/html/MNIST%20-%20CNN%20Model.ipynb" /></p>
-
-<h2 id="alexnet">AlexNet</h2>
-<p>2012년 ILSVRC우승팀의 아키텍처. LeNet과 매우 유사한 아키텍처를 가지고 있지만, 층당 필터가 더 많고 깊다. 또한 항상 대체된 합성곱 풀링 대신 스택 합성곱을 사용한다. 작은 합성곱의 스택은 합성곱층의 하나로 된 커다란 수용 영역보다 낫다. 더 많은 비선형성과 더 적은 파라미터를 도입하기 때문이다.</p>
-
-<p><img src="http://openresearch.ai/uploads/default/original/1X/b25dce7cb47b0a80b3631d10476a630df4b1f2ff.jpg" alt="출처: Alexnet 논문" /></p>
-
-<h2 id="zfnet">ZFNet</h2>
-<p>2013년 ILSVRC 우승팀의 아키텍처. AlexNet을 향상시키기 위해 아키텍처 하이퍼 파라미터를 조정했는데, 특히 중간 합성곱층의 크기를 확장하고 첫 번째 층의 스트라이드와 필터 크기를 작게 함으로써 11x11 스트라이드 4인 AlexNet이 7x7 스트라이드 2인 ZFNet으로 변경됐다. 이렇게 시도한 이유는 첫 번째 합성곱층의 필터 크기가 작으면 많은 원본 픽셀 정보를 유지하는 데 도움이 되기 때문이다. 또한 AlexNet은 1,500만 개의 이미지에 대한 훈련을 받았지만, ZFNet은 130만 개의 이미지에 대해서만 훈련을 받았다</p>
-
-<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=http%3A%2F%2Fcfile24.uf.tistory.com%2Fimage%2F9937CC415AED57D7160153" alt="출처: ZFNet 논문" /></p>
-
-<h2 id="googlenet">GoogLeNet</h2>
-<p>2014년 ILSVRC 우승팀의 아키텍처. GoogLeNet은 CNN을 사용해 인셉션층(Inception layer)이라는 새로운 아키텍처의 구성요소를 도입했다. 인셉션 층은 더 큰 합성곱을 사용하고 더 작은 정보의 이미지에도 정밀한 해상도를 유지할 수 있기 때문에 적용되었다.</p>
-
-<center><img src="/assets/images/DeepLearning/GoogLeNet.png" width="80%" /></center>
-
-<h2 id="vgg">VGG</h2>
-<p>2014년 ILSVRC 준우승팀의 아키텍처. VGG 네트워크는 단순함이 그 특징인데, 3x3 합성곱층만 사용해 쌓아올렸다. 부피를 줄이는 것은 Max Pooling으로 처리된다. 마지막에는 4,096개의 노드가 있는 두 개의 전체가 연결된 층에 소프트맥스 층이 이어진다. 입력에 대한 전처리는 훈련 세트에서 계산된 평균 RGB 값을 각 픽셀에서 빼는 것이다. 풀링은 일부 합성곱층을 따르는 Max Pooling에 의해 이루어 진다. 모든 합성곱층 다음에 Max Pooling이 이어지는 것은 아니다. Max Pooling은 스트라이드가 2인 2x2 픽셀 윈도에서 이루어진다. ReLU 활성화는 각각의 은닉층에서 사용된다. 필터의 수는 대부분 VGG 변형에서 깊이에 따라 증가한다. 16층은 VGG-16, 19층은 VGG-19.</p>
-
-<center><img src="/assets/images/DeepLearning/VGG16.png" width="60%" /></center>
-
-<h2 id="resnet">ResNet</h2>
-<p>2015년 ILSVRC 우승팀의 아키텍처. 잔차 신경망(Residual Neural Network: ResNet)은 연결 건너뛰기와 배치 정규화를 사용하는 새로운 CNN 아키텍처로서 이를 통해 VGG 네트워크보다 복잡성이 낮은데도 152층의 신경망을 훈련할 수 있었다.</p>
-
-<center><img src="/assets/images/DeepLearning/ResNet.png" width="80%" /></center>
-
-<h2 id="capsnet">CapsNet</h2>
-<p>캡슐 네트워크(CapsNet)는 CNN의 스칼라 출력 함수 감지기를 벡터 출력 캡슐로 대체한다. 또 라우팅별로 Max Pooling을 사용한다</p>
-
-<center><img src="/assets/images/DeepLearning/CapsNet.jpg" /></center>
-
-<h2 id="rnn">RNN</h2>
-<p>순환 신경망(recurrent neural Network, RNN)은 시퀀스를 처리하는 데 특화돼 있다. 예를 들어, 주어진 최근 시퀀스로부터 다음 시퀀스에 있는 용어를 예측하거나 한 언어에서 다른 언어로 단어의 시퀀스를 번역하려는 경우, 시퀀스 모델링을 할 필요가 있다. RNN은 아키텍처에 피드백 루프가 있다는 점에서 전방 전달 네트워크와 구별된다. 종종 RNN에는 메모리가 있다고 한다. RNN은 시간이 지남에 따라 순서대로 이전 내용을 잃기 시작한다.</p>
-
-<center><img src="/assets/images/DeepLearning/RNN.png" width="80%" /></center>
-
-<h2 id="lstm">LSTM</h2>
-<p>LSTM은 일반적으로 입력, 출력 및 망각 게이트를 포함해 3개 또는 4개의 게이트로 구성된다. 입력 게이트는 일반적으로 들어오는 신호 또는 입력을 수용하거나 거부해 메모리 셀 상태를 변경한다. 출력 게이트는 일반적으로 필요에 따라 다른 뉴런에 값을 전달한다. 망각 게이트는 메모리 셀의 자기 반복 연결을 제어해 필요에 따라 이전 상태를 기억하거나 잊어버린다.</p>
-
-<center><img src="/assets/images/DeepLearning/LSTM.png" width="80%" /></center>
-
-<h2 id="nmt">NMT</h2>
-<p>신경망 기반 기계 번역(Neural Machine Translation, NMT) 시스템은 일반적으로 인코더와 디코더 두 모듈로 구성된다. 먼저 인코더로 소스 문장을 읽고 생각 벡터를 만든다. 이 벡터는 문장의 의미를 나타내는 숫자의 시퀀스로 구성된다. 디코더는 문장 벡터를 처리해 다른 타깃 언어로 번역을 출력한다. 이를 인코더-디코더 아키텍처라고 한다.</p>
-
-<center><img src="/assets/images/DeepLearning/NMT.jpg" width="50%" /></center>
-
-<h2 id="gru">GRU</h2>
-<p>게이트 순환 유닛(Gated Recurrent Units, GRU)은 LSTM과 관련이 있다. 둘 다 게이트 정보의 다른 방법을 사용해 기울기 소멸 문제를 방지하고 장기 메모리에 저장한다. GRU에는 두 개의 게이트가 있는데, 리셋 게이트 r과 업데이트 게이트 z다 . 리셋 게이트는 새 입력을 어떻게 이전의 은닉상태와 결합할 것인지 결정하고 업데이트 게이트는 유지할 이전 상태 정보의 양을 정의한다.</p>
-
-<center><img src="/assets/images/DeepLearning/GRU.png" width="50%" /></center>
-
-<blockquote>
-  <p>출처: 딥러닝 전이학습, “위키북스”</p>
-</blockquote>
+<center><img src="/assets/images/Networks/Beamforming.PNG" width="80%" /></center>
+<ul>
+  <li><strong>Massive MIMO:</strong> 수 많은 안테나 배열(Massive Antenna Array)을 활용하여 같은 무선 자원을 여러명이 동시에 사용하는 기술. 4G에서의 MIMO기술은 1차원(1D) 안테나 배열을 사용하였기 때문에 자유도(degree of freedom)가 낮아 수평방향(horizontal)사용자만 구분 했지만 5G에서는 수십개 이상의 안테나를 2차원(2D)으로 배치해 수직-수평(horizontal &amp; vertical)방향 모두 사용자를 구분할 수 있다.</li>
+</ul>
+<center><img src="/assets/images/Networks/MassiveMIMO.PNG" width="80%" /></center>
+<ul>
+  <li><strong>Network Slicing:</strong> 4G에서는 Voice와 Data 서비스로 구분해서 Voice에 대해서만 별도의 Qos(Quality-of-Service)를 제공했지만, 5G에서는 네트워크 슬라이싱을 통해 각각의 Data 서비스들도 독립적인 네트워크 자원 할당이 가능하고 따라서 각 서비스별로 다른 서비스의 영향을 받지 않으면서 품질을 보장할 수 있다. <strong>특히, 시간지연에 민감한 서비스(Mission Critical Service)들의 품질을 보장할수 있게 되어 이동통신 사업자는 특화 서비스에 대한 별도의 과금체계도 도입할 수 있다.</strong></li>
+</ul>
+<center><img src="/assets/images/Networks/NetworkSlicing.PNG" width="80%" /></center>
+<ul>
+  <li><strong>NSA와 SA:</strong> NAS(Non-Standalone)는 초기 상용망에 구현괄 것으로 예상되는 구조로, 단말의 이동성(mobility) 관리 등을 제어하는 제어 플레인(control plane)의 동작은 4G LTE 망을 활용하면서 사용자 플레인(User plane/Data plane)에 해당하는 데이터 트래픽은 5G 망으로 주고 받는다. SA(Standalone) 구조는 제어 채널이나 데이터 채널 모두 5G의 자체구조를 사용하는 구조이다.</li>
+</ul>
+<center><img src="/assets/images/Networks/NSA-SA.PNG" width="80%" /></center>
+<ul>
+  <li><strong>표준의 Release 개념:</strong> <strong>Release는 3GPP의 시간 스케쥴이다.</strong> 이동통신 국제 표준은 단기간에 1회성으로 정해지는 것이 아니며 장기간에 걸쳐 수 차례 업그레이드 된다. 다음 세대가 나오더라도 수년정도는 이전 세대 기술이 계속 보완하여 발표(Release) 한다.</li>
+</ul>
+<center><img src="/assets/images/Networks/Release.PNG" width="80%" /></center>
 
         
       </section>
@@ -315,7 +275,7 @@
     
       
       
-      <a href="/tags/#deep-learning" class="page__taxonomy-item" rel="tag">Deep Learning</a>
+      <a href="/tags/#networks" class="page__taxonomy-item" rel="tag">Networks</a>
     
     </span>
   </p>
@@ -336,14 +296,14 @@
     
       
       
-      <a href="/categories/#deeplearning" class="page__taxonomy-item" rel="tag">DeepLearning</a>
+      <a href="/categories/#networks" class="page__taxonomy-item" rel="tag">Networks</a>
     
     </span>
   </p>
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2019-12-09T00:00:00+09:00">December 09, 2019</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2019-12-27T00:00:00+09:00">December 27, 2019</time></p>
         
       </footer>
 
@@ -352,12 +312,11 @@
       
   <nav class="pagination">
     
-      <a href="/ubuntu/ubuntu_kubernetes_install/" class="pagination--pager" title="우분투 쿠버네티스 설치
+      <a href="/deeplearning/neural-network-architecture/" class="pagination--pager" title="신경망 아키텍처
 ">이전</a>
     
     
-      <a href="/networks/5g-nr-standards/" class="pagination--pager" title="5G 국제 표준의 이해
-">다음</a>
+      <a href="#" class="pagination--pager disabled">다음</a>
     
   </nav>
 
@@ -381,7 +340,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/networks/5g-nr-standards/" rel="permalink">5G 국제 표준의 이해
+        <a href="/deeplearning/neural-network-architecture/" rel="permalink">신경망 아키텍처
 </a>
       
     </h2>
@@ -391,7 +350,7 @@
 
 
 
-  2 분 소요
+  3 분 소요
 
 </p>
     
@@ -603,8 +562,8 @@ search.start();
     
   <script>
     var disqus_config = function () {
-      this.page.url = "http://localhost:4000/deeplearning/neural-network-architecture/";  // Replace PAGE_URL with your page's canonical URL variable
-      this.page.identifier = "/deeplearning/neural-network-architecture"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      this.page.url = "http://localhost:4000/networks/5g-nr-standards/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/networks/5g-nr-standards"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     (function() { // DON'T EDIT BELOW THIS LINE
       var d = document, s = d.createElement('script');

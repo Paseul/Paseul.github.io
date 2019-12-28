@@ -5,6 +5,9 @@ author_profile: true
 read_time: true
 comments: true
 related: true
+categories: Networks
+tags:
+- Networks
 ---
 
 # 네트워크와 관련된 내용을 포스팅 해갈 예정입니다
