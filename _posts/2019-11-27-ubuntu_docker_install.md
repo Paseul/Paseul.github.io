@@ -9,6 +9,9 @@ categories:
 tags:
 - Ubuntu
 - Docker
+toc: true
+toc_sticky: true
+toc_label: 목차
 ---
 
 # 우분투 도커 설치(이미지 폴더 변경 까지)

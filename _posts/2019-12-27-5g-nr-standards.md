@@ -7,6 +7,14 @@ related: true
 categories: Networks
 tags:
 - Networks
+- 5G NR
+- ITU
+- 3GPP
+- 빔 포밍
+- Massive MIMO
+- Network Slicing
+- NSA
+- SA
 toc: true
 toc_sticky: true
 toc_label: 목차
