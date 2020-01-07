@@ -1,0 +1,13 @@
+I"�<ul class="toc__menu">
+  <li><a href="#생성적-적대-신경망generative-adversarial-networks-gan">생성적 적대 신경망(generative adversarial networks, GAN)</a>
+    <ul>
+      <li><a href="#gan-이란-무엇인가">GAN 이란 무엇인가?</a></li>
+      <li><a href="#gan의-아키텍처">GAN의 아키텍처</a></li>
+      <li><a href="#gan과-관련된-주요-개념">GAN과 관련된 주요 개념</a></li>
+      <li><a href="#gan의-장단점">GAN의 장단점</a></li>
+      <li><a href="#gan-훈련-시의-안정성-문제-해결하기">GAN 훈련 시의 안정성 문제 해결하기</a></li>
+      <li><a href="#그-밖의-다양한-gan">그 밖의 다양한 GAN</a></li>
+    </ul>
+  </li>
+</ul>
+:ET
