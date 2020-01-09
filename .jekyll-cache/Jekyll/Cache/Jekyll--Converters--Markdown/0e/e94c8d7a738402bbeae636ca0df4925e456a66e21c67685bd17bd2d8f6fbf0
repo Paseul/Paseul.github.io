@@ -1,0 +1,57 @@
+I" <h1 id="srgan">SRGAN</h1>
+<blockquote>
+  <p><a href="https://arxiv.org/pdf/1609.04802.pdf">Photo-Realistic Single Image Super-Resolution Using a Generative Adversarial Network</a></p>
+</blockquote>
+
+<p>SRGAN(super-resolution generative adversarial network)은 GAN의 일종으로, 저해상도 이미지의 세부사항을 다듬고 품질을 높여서 초 고해상도 이미지로 생성해 낸다</p>
+<ul>
+  <li><strong>생성기:</strong> 생성기 신경망은 64x64x3 차원으로 된 저해상도 이미지 한개를 취해서 일련의 합성곱 및 상향 표본 추출 계층들을 거쳐 256x256x3 모양으로 된 초 고해상도 이미지 한개를 생성해 낸다</li>
+  <li><strong>판별기:</strong> 판별기 신경망은 고해상도 이미지 한 개를 취해 해당 이미지가 진짜인지(진짜 데이터 표본들 중에서 나온 것인지) 아니면 가짜인지(생성기가 생성해 낸 이미지인지)를 식별해 낸다</li>
+</ul>
+
+<h2 id="srgan의-아키텍처">SRGAN의 아키텍처</h2>
+<center><img src="/assets/images/DeepLearning/SRGAN_architecture.png" width="80%" /></center>
+<p><br /></p>
+<ul>
+  <li><strong>생성기 신경망 아키텍처</strong>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">input_shape</span> <span class="o">=</span> <span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+
+  <span class="c1"># Input Layer of the generator network
+</span>  <span class="n">input_layer</span> <span class="o">=</span> <span class="n">Input</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="n">input_shape</span><span class="p">)</span>
+
+  <span class="c1"># Add the pre-residual block
+</span>  <span class="n">gen1</span> <span class="o">=</span> <span class="n">Conv2D</span><span class="p">(</span><span class="n">filters</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">strides</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s">'same'</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s">'relu'</span><span class="p">)(</span><span class="n">input_layer</span><span class="p">)</span>
+
+  <span class="c1"># Add 16 residual blocks
+</span>  <span class="n">res</span> <span class="o">=</span> <span class="n">residual_block</span><span class="p">(</span><span class="n">gen1</span><span class="p">)</span>
+  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">16</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+      <span class="n">res</span> <span class="o">=</span> <span class="n">residual_block</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+
+  <span class="c1"># Add the post-residual block
+</span>  <span class="n">gen2</span> <span class="o">=</span> <span class="n">Conv2D</span><span class="p">(</span><span class="n">filters</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">strides</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s">'same'</span><span class="p">)(</span><span class="n">res</span><span class="p">)</span>
+  <span class="n">gen2</span> <span class="o">=</span> <span class="n">BatchNormalization</span><span class="p">(</span><span class="mf">0.8</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)(</span><span class="n">gen2</span><span class="p">)</span>
+
+  <span class="c1"># Take the sum of the output from the pre-residual block(gen1) and the post-residual block(gen2)
+</span>  <span class="n">gen3</span> <span class="o">=</span> <span class="n">Add</span><span class="p">()([</span><span class="n">gen2</span><span class="p">,</span> <span class="n">gen1</span><span class="p">])</span>
+
+  <span class="c1"># Add an upsampling block
+</span>  <span class="n">gen4</span> <span class="o">=</span> <span class="n">UpSampling2D</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">2</span><span class="p">)(</span><span class="n">gen3</span><span class="p">)</span>
+  <span class="n">gen4</span> <span class="o">=</span> <span class="n">Conv2D</span><span class="p">(</span><span class="n">filters</span><span class="o">=</span><span class="mi">256</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">strides</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s">'same'</span><span class="p">)(</span><span class="n">gen4</span><span class="p">)</span>
+  <span class="n">gen4</span> <span class="o">=</span> <span class="n">Activation</span><span class="p">(</span><span class="s">'relu'</span><span class="p">)(</span><span class="n">gen4</span><span class="p">)</span>
+
+  <span class="c1"># Add another upsampling block
+</span>  <span class="n">gen5</span> <span class="o">=</span> <span class="n">UpSampling2D</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">2</span><span class="p">)(</span><span class="n">gen4</span><span class="p">)</span>
+  <span class="n">gen5</span> <span class="o">=</span> <span class="n">Conv2D</span><span class="p">(</span><span class="n">filters</span><span class="o">=</span><span class="mi">256</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">strides</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s">'same'</span><span class="p">)(</span><span class="n">gen5</span><span class="p">)</span>
+  <span class="n">gen5</span> <span class="o">=</span> <span class="n">Activation</span><span class="p">(</span><span class="s">'relu'</span><span class="p">)(</span><span class="n">gen5</span><span class="p">)</span>
+
+  <span class="c1"># Output convolution layer
+</span>  <span class="n">gen6</span> <span class="o">=</span> <span class="n">Conv2D</span><span class="p">(</span><span class="n">filters</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">strides</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s">'same'</span><span class="p">)(</span><span class="n">gen5</span><span class="p">)</span>
+  <span class="n">output</span> <span class="o">=</span> <span class="n">Activation</span><span class="p">(</span><span class="s">'tanh'</span><span class="p">)(</span><span class="n">gen6</span><span class="p">)</span>
+
+  <span class="c1"># Keras model
+</span>  <span class="n">model</span> <span class="o">=</span> <span class="n">Model</span><span class="p">(</span><span class="n">inputs</span><span class="o">=</span><span class="p">[</span><span class="n">input_layer</span><span class="p">],</span> <span class="n">outputs</span><span class="o">=</span><span class="p">[</span><span class="n">output</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="s">'generator'</span><span class="p">)</span>
+  <span class="k">return</span> <span class="n">model</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+:ET
