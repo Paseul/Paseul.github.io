@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-01-09T16:45:30+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Paseul’s Devlog</title><subtitle>C#, Python, Docker, Kubernetes, Deep learning, Reinforcement learning</subtitle><author><name>Jaehoon Lee</name><email>machianb@naver.com</email></author><entry><title type="html">초고해상도 상성적 적대 신경망</title><link href="http://localhost:4000/srgan/" rel="alternate" type="text/html" title="초고해상도 상성적 적대 신경망" /><published>2020-01-09T00:00:00+09:00</published><updated>2020-01-09T00:00:00+09:00</updated><id>http://localhost:4000/srgan</id><content type="html" xml:base="http://localhost:4000/srgan/">&lt;h1 id=&quot;srgan&quot;&gt;SRGAN&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-01-16T10:37:13+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Paseul’s Devlog</title><subtitle>C#, Python, Docker, Kubernetes, Deep learning, Reinforcement learning</subtitle><author><name>Jaehoon Lee</name><email>machianb@naver.com</email></author><entry><title type="html">초고해상도 상성적 적대 신경망</title><link href="http://localhost:4000/srgan/" rel="alternate" type="text/html" title="초고해상도 상성적 적대 신경망" /><published>2020-01-09T00:00:00+09:00</published><updated>2020-01-09T00:00:00+09:00</updated><id>http://localhost:4000/srgan</id><content type="html" xml:base="http://localhost:4000/srgan/">&lt;h1 id=&quot;srgan&quot;&gt;SRGAN&lt;/h1&gt;
 &lt;blockquote&gt;
   &lt;p&gt;&lt;a href=&quot;https://arxiv.org/pdf/1609.04802.pdf&quot;&gt;Photo-Realistic Single Image Super-Resolution Using a Generative Adversarial Network&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -229,53 +229,50 @@
 &lt;blockquote&gt;
   &lt;p&gt;출처: 딥러닝 전이학습, “위키북스”&lt;/p&gt;
 &lt;/blockquote&gt;</content><author><name>Jaehoon Lee</name><email>machianb@naver.com</email></author><category term="Deep Learning" /></entry><entry><title type="html">우분투 쿠버네티스 설치</title><link href="http://localhost:4000/ubuntu/ubuntu_kubernetes_install/" rel="alternate" type="text/html" title="우분투 쿠버네티스 설치" /><published>2019-11-28T00:00:00+09:00</published><updated>2019-11-28T00:00:00+09:00</updated><id>http://localhost:4000/ubuntu/ubuntu_kubernetes_install</id><content type="html" xml:base="http://localhost:4000/ubuntu/ubuntu_kubernetes_install/">&lt;h1 id=&quot;우분투-환경에서-쿠버네티스-설치하기dashboard-까지&quot;&gt;우분투 환경에서 쿠버네티스 설치하기(dashboard 까지)&lt;/h1&gt;
-
+&lt;h2 id=&quot;개요&quot;&gt;개요&lt;/h2&gt;
 &lt;p&gt;쿠버네티스를 설치하는 방법은 OS나 사용하는 플랫폼에 따라서 달라진다. &lt;br /&gt;
-본 포스팅에서는 우분투 환경에서 쿠버네티스를 설치하고 추가적으로 쿠버네티스 대시보드까지 설치해 보도록 하겠다. &lt;br /&gt;
-&lt;code class=&quot;highlighter-rouge&quot;&gt;실행 환경: Ubuntu 18.04(LTS)&lt;/code&gt; &lt;br /&gt;
-&lt;code class=&quot;highlighter-rouge&quot;&gt;도커 버전: 19.03&lt;/code&gt; &lt;br /&gt;&lt;/p&gt;
+본 포스팅에서는 우분투 환경에서 쿠버네티스를 설치하고 추가적으로 쿠버네티스 대시보드까지 설치해 보도록 하겠다. &lt;br /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;실행 환경: Ubuntu 18.04(LTS)&lt;br /&gt;
+도커 버전: 19.03&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;쿠버네티스의 &lt;a href=&quot;https://kubernetes.io/ko/docs/setup/&quot;&gt;한글 문서&lt;/a&gt; 에 보면 공식적으로 지원하는 커뮤니티와 생태계를 확인할 수 있다. &lt;br /&gt;
-윈도우의 경우에는 &lt;strong&gt;Docker Desktop&lt;/strong&gt; 을 설치하면 되겠구나 하는 생각이 들지만 나머지는 어떤걸 설치해야할지 막막해 진다. &lt;br /&gt;
-모든 생태계 마다 설치하는 방법이 링크를 통해 설명되어 있으니 자신이 원하는 생태계를 선택하면 될 것 같다. &lt;br /&gt;
-본인은 이중에서 &lt;a href=&quot;https://ubuntu.com/kubernetes/install#multi-node&quot;&gt;ubuntu.com&lt;/a&gt; 에 나온 MicroK8s를 사용하여 설치 해보았다 &lt;br /&gt;&lt;/p&gt;
+&lt;span style=&quot;color:#F9E79F&quot;&gt;윈도우&lt;/span&gt;의 경우에는 &lt;span style=&quot;color:#F9E79F&quot;&gt;&lt;strong&gt;Docker Desktop&lt;/strong&gt;&lt;/span&gt; 로 선택지가 정해져있지만 Linux의 경우는 MicroK8s, k3s, Ubuntu on LXD등 다양한 생태계를 공식적으로 지원하기 때문에 상황에 맞는 생태계를 선택하면 될 것 같다.&lt;br /&gt;
+본인은 이중에서 &lt;a href=&quot;https://ubuntu.com/kubernetes/install#multi-node&quot;&gt;ubuntu.com&lt;/a&gt; 에 나온 &lt;span style=&quot;color:#F9E79F&quot;&gt;&lt;strong&gt;MicroK8s&lt;/strong&gt;&lt;/span&gt;를 사용하여 설치 해보았다 &lt;br /&gt;&lt;/p&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;Install the microk8s snap
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo snap install microk8s --classic
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Check the status
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo microk8s.status --wait-ready
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Turn on standard services
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo microk8s.enable dns dashboard registry
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
+&lt;h2 id=&quot;microk8s-설치-절차&quot;&gt;microk8s 설치 절차&lt;/h2&gt;
+&lt;p&gt;&lt;span style=&quot;color:#F1948A&quot;&gt;&lt;strong&gt;1. Install the microk8s snap&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo snap install microk8s --classic
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;MicroK8s를 통해 kubectl 명령을 다음과 같이 수행할 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;color:#F1948A&quot;&gt;&lt;strong&gt;2.  Check the status&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo microk8s.status --wait-ready
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;span style=&quot;color:#F1948A&quot;&gt;&lt;strong&gt;3. Turn on standard services&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo microk8s.enable dns dashboard registry
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;span style=&quot;color:#F9E79F&quot;&gt;MicroK8s 명령을 통해 kubectl 명령을 다음과 같이 수행&lt;/span&gt;할 수 있다.&lt;/p&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ microk8s.kubectl
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;kubernetes-dashboard-설치-절차&quot;&gt;kubernetes dashboard 설치 절차&lt;/h2&gt;
 &lt;p&gt;이제 kubernetes dashboad를 설치하러 가보자
-대시보드 UI는 기본으로 배포되지 않기 때문에 &lt;a href=&quot;https://kubernetes.io/ko/docs/tasks/access-application-cluster/web-ui-dashboard/&quot;&gt;쿠버네티스 대시보드 문서&lt;/a&gt; 를 참조하여 설치해 보도록 하겠다&lt;/p&gt;
+대시보드 UI는 기본으로 배포되지 않기 때문에 &lt;span style=&quot;color:#F9E79F&quot;&gt;&lt;a href=&quot;https://kubernetes.io/ko/docs/tasks/access-application-cluster/web-ui-dashboard/&quot;&gt;쿠버네티스 대시보드 문서&lt;/a&gt;&lt;/span&gt; 를 참조하여 설치해 보도록 하겠다&lt;/p&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;Install kubenetes dashboard
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ microk8s.kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0-beta4/aio/deploy/recommended.yaml
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;&lt;span style=&quot;color:#F1948A&quot;&gt;&lt;strong&gt;1. Install kubenetes dashboard&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ microk8s.kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0-beta4/aio/deploy/recommended.yaml
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;설치가 종료되면 접속을 위한 토큰을 아래 명령을 통해 미리 생성해 둔다&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Bearer Token
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ microk8s.kubectl -n kubernetes-dashboard describe secret $(kubectl -n kubernetes-dashboard get secret | grep admin-user | awk '{print $1}')
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;p&gt;이 명령을 입력하면 아래와 같이 토큰이 나온다 &lt;br /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;설치가 종료되면 접속을 위한 토큰을 아래 명령을 통해 미리 생성해 둔다&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;color:#F1948A&quot;&gt;&lt;strong&gt;2. Bearer Token&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ microk8s.kubectl -n kubernetes-dashboard describe secret $(kubectl -n kubernetes-dashboard get secret | grep admin-user | awk '{print $1}')
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;이 명령을 입력하면 아래와 같이 토큰이 나온다 &lt;br /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Name:         admin-user-token-v57nw
 Namespace:    kubernetes-dashboard
@@ -292,13 +289,11 @@ namespace:  20 bytes
 token:      eyJhbGciOiJSUzI1NiIsImtpZCI6IiJ9.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJrdWJlcm5ldGVzLWRhc2hib2FyZCIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VjcmV0Lm5hbWUiOiJhZG1pbi11c2VyLXRva2VuLXY1N253Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6ImFkbWluLXVzZXIiLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlcnZpY2UtYWNjb3VudC51aWQiOiIwMzAzMjQzYy00MDQwLTRhNTgtOGE0Ny04NDllZTliYTc5YzEiLCJzdWIiOiJzeXN0ZW06c2VydmljZWFjY291bnQ6a3ViZXJuZXRlcy1kYXNoYm9hcmQ6YWRtaW4tdXNlciJ9.Z2JrQlitASVwWbc-s6deLRFVk5DWD3P_vjUFXsqVSY10pbjFLG4njoZwh8p3tLxnX_VBsr7_6bwxhWSYChp9hwxznemD5x5HLtjb16kI9Z7yFWLtohzkTwuFbqmQaMoget_nYcQBUC5fDmBHRfFvNKePh_vSSb2h_aYXa8GV5AcfPQpY7r461itme1EXHQJqv-SN-zUnguDguCTjD80pFZ_CmnSE1z9QdMHPB8hoB4V68gtswR1VLa6mSYdgPwCHauuOobojALSaMc3RH7MmFUumAgguhqAkX3Omqd3rJbYOMRuMjhANqd08piDC3aIabINX6gP5-Tuuw2svnV6NYQ
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;토큰이 생성되었다면 프록시 명령을 통해 대시보드를 사용할 수 있다&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;kubectl proxy
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ microk8s.kubectl proxy
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;토큰이 생성되었다면 프록시 명령을 통해 대시보드를 사용할 수 있다&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;color:#F1948A&quot;&gt;&lt;strong&gt;3. kubectl proxy&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ microk8s.kubectl proxy
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;그리고 &lt;a href=&quot;http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/&quot;&gt;http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/&lt;/a&gt; 에 접속하여 token을 입력하면&lt;/p&gt;
 

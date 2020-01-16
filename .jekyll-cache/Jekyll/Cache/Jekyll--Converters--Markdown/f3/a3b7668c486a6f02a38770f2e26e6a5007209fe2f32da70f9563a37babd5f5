@@ -1,0 +1,10 @@
+I"�<ul class="toc__menu">
+  <li><a href="#우분투-환경에서-쿠버네티스-설치하기dashboard-까지">우분투 환경에서 쿠버네티스 설치하기(dashboard 까지)</a>
+    <ul>
+      <li><a href="#개요">개요</a></li>
+      <li><a href="#microk8s-설치-절차">microk8s 설치 절차</a></li>
+      <li><a href="#kubernetes-dashboard-설치-절차">kubernetes dashboard 설치 절차</a></li>
+    </ul>
+  </li>
+</ul>
+:ET
