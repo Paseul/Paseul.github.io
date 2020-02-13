@@ -1,0 +1,713 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.17.2 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>이미지 모멘트 - Paseul’s Devlog</title>
+<meta name="description" content="C#, Python, Docker, Kubernetes, Deep learning, Reinforcement learning">
+
+
+  <meta name="author" content="Jaehoon Lee">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="Paseul's Devlog">
+<meta property="og:title" content="이미지 모멘트">
+<meta property="og:url" content="http://localhost:4000/programming/image-moments/">
+
+
+  <meta property="og:description" content="C#, Python, Docker, Kubernetes, Deep learning, Reinforcement learning">
+
+
+
+  <meta property="og:image" content="http://localhost:4000/assets/images/page-header-og-image.png">
+
+
+
+
+
+  <meta property="article:published_time" content="2020-02-12T00:00:00+09:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/programming/image-moments/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Jaehoon Lee",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Paseul's Devlog Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="assets/images" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="assets/images" sizes="16x16" href="/favicon-16x16.png">
+<!-- <link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"> -->
+<meta name="msapplication-TileColor" content="#603cba">
+<meta name="theme-color" content="#ffffff">
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Paseul's Devlog
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/about/" >About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/categories/" >Category</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="이미지 모멘트">
+    <meta itemprop="description" content="">
+    <meta itemprop="datePublished" content="February 12, 2020">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">이미지 모멘트
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 분 소요
+
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> 목차</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#이미지-모멘트">이미지 모멘트</a>
+    <ul>
+      <li><a href="#1-이미지-모멘트란">1. 이미지 모멘트란?</a></li>
+      <li><a href="#2-이미지-모멘트-계산법">2. 이미지 모멘트 계산법</a></li>
+      <li><a href="#3-이미지-모멘트-활용">3. 이미지 모멘트 활용</a></li>
+    </ul>
+  </li>
+</ul>
+            </nav>
+          </aside>
+        
+        <h1 id="이미지-모멘트">이미지 모멘트</h1>
+
+<h2 id="1-이미지-모멘트란">1. 이미지 모멘트란?</h2>
+<p><span style="color:yellow"><strong>이미지 모멘트(Image moments)</strong></span>는 <span style="color:#F9E79F">영상처리, 컴퓨터 비전 및 관련 필드에서 영상 픽셀의 강도에 대한 특정한 가중평균(모멘트)또는 일반적으로 어떠한 물체의 고유한 특성이나 해석을 할 수 있는 기능</span> 을 말한다.<br />단순하게 말한다면 어떠한 바이너리 이미지(binary image)가 있을 때 x축과 y축이 가지는 고유한 특성이다. <br />각각의 이미지의 x축과 y축의 픽셀 번호를 더한 값이 되는데 0차일 때는 이미지 값만, 1차일 때는 x축 혹은 y축만 이미지에 곱하게 되고, 2차일 때는 제곱, 3차일때는 세제곱으로 곱하여 더하게 된다. <br /> 이미지 모멘트는 <span style="color:#F9E79F"><strong>공간 모멘트(spatial moments)</strong>, <strong>중심 모멘트(central moments)</strong>, <strong>무게 중심(mass center)</strong>, <strong>정규화된 중심 모멘트(nomalized central moments)</strong></span> 등으로 나눌 수 있다. 수식으로 표현하자면 다음과 같다.</p>
+
+<center>**공간 모멘트(spatial moments)**</center>
+<center><img src="/assets/images/Computing/M_expression.png" width="25%" style="background-color:white;" /></center>
+<p><br /></p>
+
+<center>**중심 모멘트(central moments)**</center>
+<center><img src="/assets/images/Computing/MU_expression.png" width="35%" style="background-color:white;" /></center>
+<p><br /></p>
+
+<center>**무게 중심(mass center)**</center>
+<center><img src="/assets/images/Computing/MassCenter_expression.png" width="15%" style="background-color:white;" /></center>
+<p><br /></p>
+
+<center>**정규화된 중심 모멘트(nomalized central moments)**</center>
+<center><img src="/assets/images/Computing/NU_expression.png" width="15%" style="background-color:white;" /></center>
+
+<h2 id="2-이미지-모멘트-계산법">2. 이미지 모멘트 계산법</h2>
+<p>이미지 모멘트를 계산하는 방법은 위에서 설명했듯이 바이너리 이미지의 각 축당 픽셀 번호를 이미지에 곱하여 계산하게 되며 3종류의 모멘트를 계산하는 방법을 파이썬 코드로 알아보자.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">cv2</span>
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">mgrid</span><span class="p">,</span> <span class="nb">sum</span>
+
+<span class="n">img</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s">"Image/S0.png"</span><span class="p">)</span>
+
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">mgrid</span><span class="p">[:</span><span class="n">img</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],:</span><span class="n">img</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
+
+<span class="n">M</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="c1"># spatial moments
+</span><span class="n">M</span><span class="p">[</span><span class="s">'m00'</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'m01'</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">img</span><span class="p">)</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'m10'</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">y</span><span class="o">*</span><span class="n">img</span><span class="p">)</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'m11'</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">img</span><span class="p">)</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'m02'</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">img</span><span class="p">)</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'m20'</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">img</span><span class="p">)</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'m12'</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">y</span><span class="o">*</span><span class="n">img</span><span class="p">)</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'m21'</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">img</span><span class="p">)</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'m22'</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">img</span><span class="p">)</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'m03'</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">3</span><span class="o">*</span><span class="n">img</span><span class="p">)</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'m30'</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">y</span><span class="o">**</span><span class="mi">3</span><span class="o">*</span><span class="n">img</span><span class="p">)</span>
+
+<span class="c1"># Mass Center of Image
+</span><span class="n">cX</span> <span class="o">=</span> <span class="n">M</span><span class="p">[</span><span class="s">'m01'</span><span class="p">]</span> <span class="o">/</span><span class="n">M</span><span class="p">[</span><span class="s">'m00'</span><span class="p">]</span>
+<span class="n">cY</span> <span class="o">=</span> <span class="n">M</span><span class="p">[</span><span class="s">'m10'</span><span class="p">]</span> <span class="o">/</span><span class="n">M</span><span class="p">[</span><span class="s">'m00'</span><span class="p">]</span>
+
+<span class="c1"># central moments
+</span><span class="n">M</span><span class="p">[</span><span class="s">'mu00'</span><span class="p">]</span> <span class="o">=</span> <span class="n">M</span><span class="p">[</span><span class="s">'m00'</span><span class="p">]</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'mu01'</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'mu10'</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'mu11'</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">((</span><span class="n">x</span><span class="o">-</span><span class="n">cX</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">y</span><span class="o">-</span><span class="n">cY</span><span class="p">)</span><span class="o">*</span><span class="n">img</span><span class="p">)</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'mu02'</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">((</span><span class="n">x</span><span class="o">-</span><span class="n">cX</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">img</span><span class="p">)</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'mu20'</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">((</span><span class="n">y</span><span class="o">-</span><span class="n">cY</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">img</span><span class="p">)</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'mu12'</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">((</span><span class="n">x</span><span class="o">-</span><span class="n">cX</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">y</span><span class="o">-</span><span class="n">cY</span><span class="p">)</span><span class="o">*</span><span class="n">img</span><span class="p">)</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'mu21'</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">((</span><span class="n">y</span><span class="o">-</span><span class="n">cY</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">cX</span><span class="p">)</span><span class="o">*</span><span class="n">img</span><span class="p">)</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'mu03'</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">((</span><span class="n">x</span><span class="o">-</span><span class="n">cX</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span><span class="o">*</span><span class="n">img</span><span class="p">)</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'mu30'</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">((</span><span class="n">y</span><span class="o">-</span><span class="n">cY</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span><span class="o">*</span><span class="n">img</span><span class="p">)</span>
+
+<span class="c1"># nomalized central moments
+</span><span class="n">M</span><span class="p">[</span><span class="s">'nu00'</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'nu01'</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'nu10'</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'nu11'</span><span class="p">]</span> <span class="o">=</span> <span class="n">M</span><span class="p">[</span><span class="s">'mu11'</span><span class="p">]</span>  <span class="o">/</span> <span class="n">M</span><span class="p">[</span><span class="s">'mu00'</span><span class="p">]</span> <span class="o">**</span><span class="p">(</span><span class="mi">2</span><span class="o">/</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'nu02'</span><span class="p">]</span> <span class="o">=</span> <span class="n">M</span><span class="p">[</span><span class="s">'mu02'</span><span class="p">]</span>  <span class="o">/</span> <span class="n">M</span><span class="p">[</span><span class="s">'mu00'</span><span class="p">]</span> <span class="o">**</span><span class="p">(</span><span class="mi">2</span><span class="o">/</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'nu20'</span><span class="p">]</span> <span class="o">=</span> <span class="n">M</span><span class="p">[</span><span class="s">'mu20'</span><span class="p">]</span>  <span class="o">/</span> <span class="n">M</span><span class="p">[</span><span class="s">'mu00'</span><span class="p">]</span> <span class="o">**</span><span class="p">(</span><span class="mi">2</span><span class="o">/</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'nu12'</span><span class="p">]</span> <span class="o">=</span> <span class="n">M</span><span class="p">[</span><span class="s">'mu12'</span><span class="p">]</span>  <span class="o">/</span> <span class="n">M</span><span class="p">[</span><span class="s">'mu00'</span><span class="p">]</span> <span class="o">**</span><span class="p">(</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'nu21'</span><span class="p">]</span> <span class="o">=</span> <span class="n">M</span><span class="p">[</span><span class="s">'mu21'</span><span class="p">]</span>  <span class="o">/</span> <span class="n">M</span><span class="p">[</span><span class="s">'mu00'</span><span class="p">]</span> <span class="o">**</span><span class="p">(</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'nu03'</span><span class="p">]</span> <span class="o">=</span> <span class="n">M</span><span class="p">[</span><span class="s">'mu03'</span><span class="p">]</span>  <span class="o">/</span> <span class="n">M</span><span class="p">[</span><span class="s">'mu00'</span><span class="p">]</span> <span class="o">**</span><span class="p">(</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'nu30'</span><span class="p">]</span> <span class="o">=</span> <span class="n">M</span><span class="p">[</span><span class="s">'mu30'</span><span class="p">]</span>  <span class="o">/</span> <span class="n">M</span><span class="p">[</span><span class="s">'mu00'</span><span class="p">]</span> <span class="o">**</span><span class="p">(</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">M</span><span class="p">)</span>
+</code></pre></div></div>
+<p>필요한 부분만 따로 사용할 수 있도록 코드를 전개했지만 opencv의 <a href="https://docs.opencv.org/2.4/modules/imgproc/doc/structural_analysis_and_shape_descriptors.html?highlight=ellipse">moments</a> 함수를 사용하면 바로 구할 수도 있다.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">cv2</span>
+
+<span class="n">img</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s">"Image/S0.png"</span><span class="p">)</span>
+<span class="n">M</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">moments</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">M</span><span class="p">)</span>
+</code></pre></div></div>
+<h2 id="3-이미지-모멘트-활용">3. 이미지 모멘트 활용</h2>
+<p>이미지 모멘트를 가장 많이 활용하는 부분은 오브젝트의 중심을 찾는데 많이 사용된다. 
+예를들어 다음과 같은 의자의 윤곽 및 중심을 찾기 위하여 활용해 보도록 하겠다.</p>
+<center><img src="/assets/images/Computing/chair.jpg" width="40%" /></center>
+<p><br /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">cv2</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+
+<span class="n">img</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s">"chair.jpg"</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">IMREAD_GRAYSCALE</span><span class="p">)</span>
+<span class="n">ret</span><span class="p">,</span> <span class="n">thresh</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">threshold</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="n">M</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">moments</span><span class="p">(</span><span class="n">thresh</span><span class="p">)</span>
+
+<span class="n">cX</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">M</span><span class="p">[</span><span class="s">"m10"</span><span class="p">]</span> <span class="o">/</span> <span class="n">M</span><span class="p">[</span><span class="s">"m00"</span><span class="p">])</span>
+<span class="n">cY</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">M</span><span class="p">[</span><span class="s">"m01"</span><span class="p">]</span> <span class="o">/</span> <span class="n">M</span><span class="p">[</span><span class="s">"m00"</span><span class="p">])</span>
+
+<span class="n">dst</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">cv2</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">dst</span><span class="p">,</span> <span class="p">(</span><span class="n">cX</span><span class="p">,</span> <span class="n">cY</span><span class="p">),</span> <span class="mi">5</span><span class="p">,</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">),</span> <span class="mi">5</span><span class="p">)</span>
+
+<span class="n">contours</span><span class="p">,</span> <span class="n">hierarchy</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">findContours</span><span class="p">(</span><span class="n">thresh</span><span class="p">,</span><span class="n">cv2</span><span class="o">.</span><span class="n">RETR_EXTERNAL</span><span class="p">,</span><span class="n">cv2</span><span class="o">.</span><span class="n">CHAIN_APPROX_SIMPLE</span><span class="p">)</span>
+<span class="n">cv2</span><span class="o">.</span><span class="n">drawContours</span><span class="p">(</span><span class="n">dst</span><span class="p">,</span> <span class="n">contours</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">),</span> <span class="mi">5</span><span class="p">)</span>
+
+<span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s">"chair_after"</span><span class="p">,</span> <span class="n">dst</span><span class="p">)</span>
+<span class="n">cv2</span><span class="o">.</span><span class="n">imwrite</span><span class="p">(</span><span class="s">"chair_after.jpg"</span><span class="p">,</span> <span class="n">dst</span><span class="p">)</span>
+</code></pre></div></div>
+<p>크기가 원본과 동일한 이미지에 무게중심을 찾아서 원을 그리고, 윤곽선을 찾기 위하여 findContours 함수의 결과를 drawContours함수로 그린 결과는 다음과 같다 .</p>
+<center><img src="/assets/images/Computing/chair_after.jpg" width="40%" /></center>
+<p><br />
+여기에서 좀더 나아가 2차 모멘트를  이용할 수 있는 예제가 있어서 소개하고자 한다.<br />
+아래와 같이 연결된 형태가 아닌 여러개의 오브젝트의 분포(distribution)의 전체 분포를 그려보고싶어서 Contour 함수를 사용하여 찾으면 어떻게 될까?</p>
+
+<center><img src="/assets/images/Computing/ellipse.jpg" width="40%" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="/assets/images/Computing/ellipse_fail.jpg" width="40%" /></center>
+<p><br />
+예상했던 결과와는 달리 모든 오브젝트에 윤곽선이 그려지고 말았다. 이때 활용할 수 있는 것이 2차 모멘트를 이용하여 분포를 계산하는 방법으로 <span style="color:#F9E79F"><strong>위그너 함수(Wigner quasiprobability distribution)</strong></span>을 사용하여 확률분포를 계산할 수 있다.</p>
+
+<center><img src="/assets/images/Computing/iso11146.png" width="60%" /></center>
+<p><br />
+위의 분포에서 <strong>Dx, Dy, φ</strong> 를 구하는 식은 아래와 같다.</p>
+
+<center><img src="/assets/images/Computing/DX_expression.png" width="30%" /></center>
+<center><img src="/assets/images/Computing/DY_expression.png" width="30%" /></center>
+<center><img src="/assets/images/Computing/PHI_expression.png" width="30%" /></center>
+<p><br />
+각각의 값을 구하여서 타원을 그려보자.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">cv2</span>
+
+<span class="n">img</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s">"ellipse.jpg"</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">IMREAD_GRAYSCALE</span><span class="p">)</span>
+<span class="n">ret</span><span class="p">,</span> <span class="n">thresh</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">threshold</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="n">M</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">moments</span><span class="p">(</span><span class="n">thresh</span><span class="p">)</span>
+
+<span class="n">cX</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">M</span><span class="p">[</span><span class="s">"m10"</span><span class="p">]</span> <span class="o">/</span> <span class="n">M</span><span class="p">[</span><span class="s">"m00"</span><span class="p">])</span>
+<span class="n">cY</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">M</span><span class="p">[</span><span class="s">"m01"</span><span class="p">]</span> <span class="o">/</span> <span class="n">M</span><span class="p">[</span><span class="s">"m00"</span><span class="p">])</span>
+<span class="n">cX2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">M</span><span class="p">[</span><span class="s">"mu20"</span><span class="p">]</span> <span class="o">/</span> <span class="n">M</span><span class="p">[</span><span class="s">"m00"</span><span class="p">])</span>
+<span class="n">cXY</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">M</span><span class="p">[</span><span class="s">"mu11"</span><span class="p">]</span> <span class="o">/</span> <span class="n">M</span><span class="p">[</span><span class="s">"m00"</span><span class="p">])</span>
+<span class="n">cY2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">M</span><span class="p">[</span><span class="s">"mu02"</span><span class="p">]</span> <span class="o">/</span> <span class="n">M</span><span class="p">[</span><span class="s">"m00"</span><span class="p">])</span>
+
+<span class="n">dX</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span><span class="o">*</span><span class="p">((</span><span class="n">cX2</span> <span class="o">+</span> <span class="n">cY2</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="nb">abs</span><span class="p">(</span><span class="n">cXY</span><span class="p">))</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span><span class="o">.</span><span class="n">real</span><span class="p">)</span>
+<span class="n">dY</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span><span class="o">*</span><span class="p">((</span><span class="n">cX2</span> <span class="o">+</span> <span class="n">cY2</span><span class="p">)</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="nb">abs</span><span class="p">(</span><span class="n">cXY</span><span class="p">))</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span><span class="o">.</span><span class="n">real</span><span class="p">)</span>
+
+<span class="k">if</span><span class="p">((</span><span class="n">cX2</span> <span class="o">-</span> <span class="n">cY2</span><span class="p">)</span><span class="o">!=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">cXY</span> <span class="o">/</span> <span class="p">(</span><span class="n">cX2</span> <span class="o">-</span> <span class="n">cY2</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">theta</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">*</span> <span class="mi">180</span>
+<span class="n">cv2</span><span class="o">.</span><span class="n">ellipse</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="p">(</span><span class="n">cX</span><span class="p">,</span> <span class="n">cY</span><span class="p">),</span> <span class="p">(</span><span class="n">dX</span><span class="p">,</span> <span class="n">dY</span><span class="p">),</span> <span class="n">theta</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">360</span><span class="p">,</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">),</span> <span class="mi">5</span><span class="p">)</span>
+
+<span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s">"ellipse_after"</span><span class="p">,</span> <span class="n">img</span><span class="p">)</span>
+<span class="n">cv2</span><span class="o">.</span><span class="n">imwrite</span><span class="p">(</span><span class="s">"ellipse_after.jpg"</span><span class="p">,</span> <span class="n">img</span><span class="p">)</span>
+</code></pre></div></div>
+
+<center><img src="/assets/images/Computing/ellipse_after.jpg" width="40%" /></center>
+<p><br />
+위와 같이 2차 중심 모멘트를 이용하여 원래 원했던 분포를 확률범위로 구하는 것이 가능하다.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#image-moments" class="page__taxonomy-item" rel="tag">Image moments</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#opencv" class="page__taxonomy-item" rel="tag">opencv</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#python" class="page__taxonomy-item" rel="tag">python</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#programming" class="page__taxonomy-item" rel="tag">Programming</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2020-02-12T00:00:00+09:00">February 12, 2020</time></p>
+        
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/srgan/" class="pagination--pager" title="초고해상도 상성적 적대 신경망
+">이전</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">참고</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/srgan/" rel="permalink">초고해상도 상성적 적대 신경망
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/deeplearning/ml-library/" rel="permalink">머신러닝 라이브러리
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/networks/5g-nr-standards/" rel="permalink">5G 국제 표준의 이해
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/deeplearning/neural-network-architecture/" rel="permalink">신경망 아키텍처
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><div class="search-searchbar"></div>
+  <div class="search-hits"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://www.linkedin.com/in/jaehoon265779188/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> Linkedin</a></li>
+        
+      
+        
+          <li><a href="https://github.com/paseul" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 Jaehoon Lee. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+<!-- Including InstantSearch.js library and styling -->
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch-theme-algolia.min.css">
+
+<script>
+// Instanciating InstantSearch.js with Algolia credentials
+const search = instantsearch({
+  appId: '0ESNAQDTWC',
+  apiKey: '851e21fa985fedd9107836d9656afee6',
+  indexName: 'devlog',
+  searchParameters: {
+    restrictSearchableAttributes: [
+      'title',
+      'content'
+    ]
+  }
+});
+
+const hitTemplate = function(hit) {
+  const url = hit.url;
+  const title = hit._highlightResult.title.value;
+  const content = hit._highlightResult.html.value;
+
+  return `
+    <div class="list__item">
+      <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+        <h2 class="archive__item-title" itemprop="headline"><a href="${url}">${title}</a></h2>
+        <div class="archive__item-excerpt" itemprop="description">${content}</div>
+      </article>
+    </div>
+  `;
+}
+
+// Adding searchbar and results widgets
+search.addWidget(
+  instantsearch.widgets.searchBox({
+    container: '.search-searchbar',
+    poweredBy: true,
+    placeholder: '검색어를 입력하세요...'
+  })
+);
+search.addWidget(
+  instantsearch.widgets.hits({
+    container: '.search-hits',
+    templates: {
+      item: hitTemplate
+    }
+  })
+);
+
+// Starting the search
+search.start();
+</script>
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "http://localhost:4000/programming/image-moments/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/programming/image-moments"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://paseul.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-152547676-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-152547676-1');
+</script>
+
+
+
+  </body>
+</html>

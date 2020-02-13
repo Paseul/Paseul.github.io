@@ -1,0 +1,160 @@
+I"�t<h1 id="이미지-모멘트">이미지 모멘트</h1>
+
+<h2 id="1-이미지-모멘트란">1. 이미지 모멘트란?</h2>
+<p><span style="color:yellow"><strong>이미지 모멘트(Image moments)</strong></span>는 <span style="color:#F9E79F">영상처리, 컴퓨터 비전 및 관련 필드에서 영상 픽셀의 강도에 대한 특정한 가중평균(모멘트)또는 일반적으로 어떠한 물체의 고유한 특성이나 해석을 할 수 있는 기능</span> 을 말한다.<br />단순하게 말한다면 어떠한 바이너리 이미지(binary image)가 있을 때 x축과 y축이 가지는 고유한 특성이다. <br />각각의 이미지의 x축과 y축의 픽셀 번호를 더한 값이 되는데 0차일 때는 이미지 값만, 1차일 때는 x축 혹은 y축만 이미지에 곱하게 되고, 2차일 때는 제곱, 3차일때는 세제곱으로 곱하여 더하게 된다. <br /> 이미지 모멘트는 <span style="color:#F9E79F"><strong>공간 모멘트(spatial moments)</strong>, <strong>중심 모멘트(central moments)</strong>, <strong>무게 중심(mass center)</strong>, <strong>정규화된 중심 모멘트(nomalized central moments)</strong></span> 등으로 나눌 수 있다. 수식으로 표현하자면 다음과 같다.</p>
+
+<center>**공간 모멘트(spatial moments)**</center>
+<center><img src="/assets/images/Computing/M_expression.png" width="25%" style="background-color:white;" /></center>
+<p><br /></p>
+
+<center>**중심 모멘트(central moments)**</center>
+<center><img src="/assets/images/Computing/MU_expression.png" width="35%" style="background-color:white;" /></center>
+<p><br /></p>
+
+<center>**무게 중심(mass center)**</center>
+<center><img src="/assets/images/Computing/MassCenter_expression.png" width="15%" style="background-color:white;" /></center>
+<p><br /></p>
+
+<center>**정규화된 중심 모멘트(nomalized central moments)**</center>
+<center><img src="/assets/images/Computing/NU_expression.png" width="15%" style="background-color:white;" /></center>
+
+<h2 id="2-이미지-모멘트-계산법">2. 이미지 모멘트 계산법</h2>
+<p>이미지 모멘트를 계산하는 방법은 위에서 설명했듯이 바이너리 이미지의 각 축당 픽셀 번호를 이미지에 곱하여 계산하게 되며 3종류의 모멘트를 계산하는 방법을 파이썬 코드로 알아보자.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">cv2</span>
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">mgrid</span><span class="p">,</span> <span class="nb">sum</span>
+
+<span class="n">img</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s">"Image/S0.png"</span><span class="p">)</span>
+
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">mgrid</span><span class="p">[:</span><span class="n">img</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],:</span><span class="n">img</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
+
+<span class="n">M</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="c1"># spatial moments
+</span><span class="n">M</span><span class="p">[</span><span class="s">'m00'</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'m01'</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">img</span><span class="p">)</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'m10'</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">y</span><span class="o">*</span><span class="n">img</span><span class="p">)</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'m11'</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">img</span><span class="p">)</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'m02'</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">img</span><span class="p">)</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'m20'</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">img</span><span class="p">)</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'m12'</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">y</span><span class="o">*</span><span class="n">img</span><span class="p">)</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'m21'</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">img</span><span class="p">)</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'m22'</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">img</span><span class="p">)</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'m03'</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">3</span><span class="o">*</span><span class="n">img</span><span class="p">)</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'m30'</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">y</span><span class="o">**</span><span class="mi">3</span><span class="o">*</span><span class="n">img</span><span class="p">)</span>
+
+<span class="c1"># Mass Center of Image
+</span><span class="n">cX</span> <span class="o">=</span> <span class="n">M</span><span class="p">[</span><span class="s">'m01'</span><span class="p">]</span> <span class="o">/</span><span class="n">M</span><span class="p">[</span><span class="s">'m00'</span><span class="p">]</span>
+<span class="n">cY</span> <span class="o">=</span> <span class="n">M</span><span class="p">[</span><span class="s">'m10'</span><span class="p">]</span> <span class="o">/</span><span class="n">M</span><span class="p">[</span><span class="s">'m00'</span><span class="p">]</span>
+
+<span class="c1"># central moments
+</span><span class="n">M</span><span class="p">[</span><span class="s">'mu00'</span><span class="p">]</span> <span class="o">=</span> <span class="n">M</span><span class="p">[</span><span class="s">'m00'</span><span class="p">]</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'mu01'</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'mu10'</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'mu11'</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">((</span><span class="n">x</span><span class="o">-</span><span class="n">cX</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">y</span><span class="o">-</span><span class="n">cY</span><span class="p">)</span><span class="o">*</span><span class="n">img</span><span class="p">)</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'mu02'</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">((</span><span class="n">x</span><span class="o">-</span><span class="n">cX</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">img</span><span class="p">)</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'mu20'</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">((</span><span class="n">y</span><span class="o">-</span><span class="n">cY</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">img</span><span class="p">)</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'mu12'</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">((</span><span class="n">x</span><span class="o">-</span><span class="n">cX</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">y</span><span class="o">-</span><span class="n">cY</span><span class="p">)</span><span class="o">*</span><span class="n">img</span><span class="p">)</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'mu21'</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">((</span><span class="n">y</span><span class="o">-</span><span class="n">cY</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">cX</span><span class="p">)</span><span class="o">*</span><span class="n">img</span><span class="p">)</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'mu03'</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">((</span><span class="n">x</span><span class="o">-</span><span class="n">cX</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span><span class="o">*</span><span class="n">img</span><span class="p">)</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'mu30'</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">((</span><span class="n">y</span><span class="o">-</span><span class="n">cY</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span><span class="o">*</span><span class="n">img</span><span class="p">)</span>
+
+<span class="c1"># nomalized central moments
+</span><span class="n">M</span><span class="p">[</span><span class="s">'nu00'</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'nu01'</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'nu10'</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'nu11'</span><span class="p">]</span> <span class="o">=</span> <span class="n">M</span><span class="p">[</span><span class="s">'mu11'</span><span class="p">]</span>  <span class="o">/</span> <span class="n">M</span><span class="p">[</span><span class="s">'mu00'</span><span class="p">]</span> <span class="o">**</span><span class="p">(</span><span class="mi">2</span><span class="o">/</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'nu02'</span><span class="p">]</span> <span class="o">=</span> <span class="n">M</span><span class="p">[</span><span class="s">'mu02'</span><span class="p">]</span>  <span class="o">/</span> <span class="n">M</span><span class="p">[</span><span class="s">'mu00'</span><span class="p">]</span> <span class="o">**</span><span class="p">(</span><span class="mi">2</span><span class="o">/</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'nu20'</span><span class="p">]</span> <span class="o">=</span> <span class="n">M</span><span class="p">[</span><span class="s">'mu20'</span><span class="p">]</span>  <span class="o">/</span> <span class="n">M</span><span class="p">[</span><span class="s">'mu00'</span><span class="p">]</span> <span class="o">**</span><span class="p">(</span><span class="mi">2</span><span class="o">/</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'nu12'</span><span class="p">]</span> <span class="o">=</span> <span class="n">M</span><span class="p">[</span><span class="s">'mu12'</span><span class="p">]</span>  <span class="o">/</span> <span class="n">M</span><span class="p">[</span><span class="s">'mu00'</span><span class="p">]</span> <span class="o">**</span><span class="p">(</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'nu21'</span><span class="p">]</span> <span class="o">=</span> <span class="n">M</span><span class="p">[</span><span class="s">'mu21'</span><span class="p">]</span>  <span class="o">/</span> <span class="n">M</span><span class="p">[</span><span class="s">'mu00'</span><span class="p">]</span> <span class="o">**</span><span class="p">(</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'nu03'</span><span class="p">]</span> <span class="o">=</span> <span class="n">M</span><span class="p">[</span><span class="s">'mu03'</span><span class="p">]</span>  <span class="o">/</span> <span class="n">M</span><span class="p">[</span><span class="s">'mu00'</span><span class="p">]</span> <span class="o">**</span><span class="p">(</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">M</span><span class="p">[</span><span class="s">'nu30'</span><span class="p">]</span> <span class="o">=</span> <span class="n">M</span><span class="p">[</span><span class="s">'mu30'</span><span class="p">]</span>  <span class="o">/</span> <span class="n">M</span><span class="p">[</span><span class="s">'mu00'</span><span class="p">]</span> <span class="o">**</span><span class="p">(</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">M</span><span class="p">)</span>
+</code></pre></div></div>
+<p>필요한 부분만 따로 사용할 수 있도록 코드를 전개했지만 opencv의 <a href="https://docs.opencv.org/2.4/modules/imgproc/doc/structural_analysis_and_shape_descriptors.html?highlight=ellipse">moments</a> 함수를 사용하면 바로 구할 수도 있다.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">cv2</span>
+
+<span class="n">img</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s">"Image/S0.png"</span><span class="p">)</span>
+<span class="n">M</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">moments</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">M</span><span class="p">)</span>
+</code></pre></div></div>
+<h2 id="3-이미지-모멘트-활용">3. 이미지 모멘트 활용</h2>
+<p>이미지 모멘트를 가장 많이 활용하는 부분은 오브젝트의 중심을 찾는데 많이 사용된다. 
+예를들어 다음과 같은 의자의 윤곽 및 중심을 찾기 위하여 활용해 보도록 하겠다.</p>
+<center><img src="/assets/images/Computing/chair.jpg" width="40%" /></center>
+<p><br /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">cv2</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+
+<span class="n">img</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s">"chair.jpg"</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">IMREAD_GRAYSCALE</span><span class="p">)</span>
+<span class="n">ret</span><span class="p">,</span> <span class="n">thresh</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">threshold</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="n">M</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">moments</span><span class="p">(</span><span class="n">thresh</span><span class="p">)</span>
+
+<span class="n">cX</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">M</span><span class="p">[</span><span class="s">"m10"</span><span class="p">]</span> <span class="o">/</span> <span class="n">M</span><span class="p">[</span><span class="s">"m00"</span><span class="p">])</span>
+<span class="n">cY</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">M</span><span class="p">[</span><span class="s">"m01"</span><span class="p">]</span> <span class="o">/</span> <span class="n">M</span><span class="p">[</span><span class="s">"m00"</span><span class="p">])</span>
+
+<span class="n">dst</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">cv2</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">dst</span><span class="p">,</span> <span class="p">(</span><span class="n">cX</span><span class="p">,</span> <span class="n">cY</span><span class="p">),</span> <span class="mi">5</span><span class="p">,</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">),</span> <span class="mi">5</span><span class="p">)</span>
+
+<span class="n">contours</span><span class="p">,</span> <span class="n">hierarchy</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">findContours</span><span class="p">(</span><span class="n">thresh</span><span class="p">,</span><span class="n">cv2</span><span class="o">.</span><span class="n">RETR_EXTERNAL</span><span class="p">,</span><span class="n">cv2</span><span class="o">.</span><span class="n">CHAIN_APPROX_SIMPLE</span><span class="p">)</span>
+<span class="n">cv2</span><span class="o">.</span><span class="n">drawContours</span><span class="p">(</span><span class="n">dst</span><span class="p">,</span> <span class="n">contours</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">),</span> <span class="mi">5</span><span class="p">)</span>
+
+<span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s">"chair_after"</span><span class="p">,</span> <span class="n">dst</span><span class="p">)</span>
+<span class="n">cv2</span><span class="o">.</span><span class="n">imwrite</span><span class="p">(</span><span class="s">"chair_after.jpg"</span><span class="p">,</span> <span class="n">dst</span><span class="p">)</span>
+</code></pre></div></div>
+<p>크기가 원본과 동일한 이미지에 무게중심을 찾아서 원을 그리고, 윤곽선을 찾기 위하여 findContours 함수의 결과를 drawContours함수로 그린 결과는 다음과 같다 .</p>
+<center><img src="/assets/images/Computing/chair_after.jpg" width="40%" /></center>
+<p><br />
+여기에서 좀더 나아가 2차 모멘트를  이용할 수 있는 예제가 있어서 소개하고자 한다.<br />
+아래와 같이 연결된 형태가 아닌 여러개의 오브젝트의 분포(distribution)의 전체 분포를 그려보고싶어서 Contour 함수를 사용하여 찾으면 어떻게 될까?</p>
+
+<center><img src="/assets/images/Computing/ellipse.jpg" width="40%" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="/assets/images/Computing/ellipse_fail.jpg" width="40%" /></center>
+<p><br />
+예상했던 결과와는 달리 모든 오브젝트에 윤곽선이 그려지고 말았다. 이때 활용할 수 있는 것이 2차 모멘트를 이용하여 분포를 계산하는 방법으로 <span style="color:#F9E79F"><strong>위그너 함수(Wigner quasiprobability distribution)</strong></span>을 사용하여 확률분포를 계산할 수 있다.</p>
+
+<center><img src="/assets/images/Computing/iso11146.png" width="60%" /></center>
+<p><br />
+위의 분포에서 <strong>Dx, Dy, φ</strong> 를 구하는 식은 아래와 같다.</p>
+
+<center><img src="/assets/images/Computing/DX_expression.png" width="30%" /></center>
+<center><img src="/assets/images/Computing/DY_expression.png" width="30%" /></center>
+<center><img src="/assets/images/Computing/PHI_expression.png" width="30%" /></center>
+<p><br />
+각각의 값을 구하여서 타원을 그려보자.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">cv2</span>
+
+<span class="n">img</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s">"ellipse.jpg"</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">IMREAD_GRAYSCALE</span><span class="p">)</span>
+<span class="n">ret</span><span class="p">,</span> <span class="n">thresh</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">threshold</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="n">M</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">moments</span><span class="p">(</span><span class="n">thresh</span><span class="p">)</span>
+
+<span class="n">cX</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">M</span><span class="p">[</span><span class="s">"m10"</span><span class="p">]</span> <span class="o">/</span> <span class="n">M</span><span class="p">[</span><span class="s">"m00"</span><span class="p">])</span>
+<span class="n">cY</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">M</span><span class="p">[</span><span class="s">"m01"</span><span class="p">]</span> <span class="o">/</span> <span class="n">M</span><span class="p">[</span><span class="s">"m00"</span><span class="p">])</span>
+<span class="n">cX2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">M</span><span class="p">[</span><span class="s">"mu20"</span><span class="p">]</span> <span class="o">/</span> <span class="n">M</span><span class="p">[</span><span class="s">"m00"</span><span class="p">])</span>
+<span class="n">cXY</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">M</span><span class="p">[</span><span class="s">"mu11"</span><span class="p">]</span> <span class="o">/</span> <span class="n">M</span><span class="p">[</span><span class="s">"m00"</span><span class="p">])</span>
+<span class="n">cY2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">M</span><span class="p">[</span><span class="s">"mu02"</span><span class="p">]</span> <span class="o">/</span> <span class="n">M</span><span class="p">[</span><span class="s">"m00"</span><span class="p">])</span>
+
+<span class="n">dX</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span><span class="o">*</span><span class="p">((</span><span class="n">cX2</span> <span class="o">+</span> <span class="n">cY2</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="nb">abs</span><span class="p">(</span><span class="n">cXY</span><span class="p">))</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span><span class="o">.</span><span class="n">real</span><span class="p">)</span>
+<span class="n">dY</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span><span class="o">*</span><span class="p">((</span><span class="n">cX2</span> <span class="o">+</span> <span class="n">cY2</span><span class="p">)</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="nb">abs</span><span class="p">(</span><span class="n">cXY</span><span class="p">))</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span><span class="o">.</span><span class="n">real</span><span class="p">)</span>
+
+<span class="k">if</span><span class="p">((</span><span class="n">cX2</span> <span class="o">-</span> <span class="n">cY2</span><span class="p">)</span><span class="o">!=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">cXY</span> <span class="o">/</span> <span class="p">(</span><span class="n">cX2</span> <span class="o">-</span> <span class="n">cY2</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">theta</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">*</span> <span class="mi">180</span>
+<span class="n">cv2</span><span class="o">.</span><span class="n">ellipse</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="p">(</span><span class="n">cX</span><span class="p">,</span> <span class="n">cY</span><span class="p">),</span> <span class="p">(</span><span class="n">dX</span><span class="p">,</span> <span class="n">dY</span><span class="p">),</span> <span class="n">theta</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">360</span><span class="p">,</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">),</span> <span class="mi">5</span><span class="p">)</span>
+
+<span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s">"ellipse_after"</span><span class="p">,</span> <span class="n">img</span><span class="p">)</span>
+<span class="n">cv2</span><span class="o">.</span><span class="n">imwrite</span><span class="p">(</span><span class="s">"ellipse_after.jpg"</span><span class="p">,</span> <span class="n">img</span><span class="p">)</span>
+</code></pre></div></div>
+
+<center><img src="/assets/images/Computing/ellipse_after.jpg" width="40%" /></center>
+<p><br />
+위와 같이 2차 중심 모멘트를 이용하여 원래 원했던 분포를 확률범위로 구하는 것이 가능하다.</p>
+:ET
